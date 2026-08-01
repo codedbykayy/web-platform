@@ -1,0 +1,30 @@
+.livestream{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    padding:2rem;
+    border:1px solid;
+    border-radius:1rem;
+    min-height:220px;
+}
+.livestream__title{
+    margin:0;
+}
+.livestream__description{
+    margin:0;
+}
+.livestream__media{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:1px dashed;
+    border-radius:1rem;
+    min-height: 220px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.livestream__buttons{
+    display:flex;
+    justify-content:center;
+}
