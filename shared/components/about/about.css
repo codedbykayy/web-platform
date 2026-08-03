@@ -1,0 +1,211 @@
+html,
+body{
+    margin:0;
+    padding:0;
+}
+body{
+    background:var(--about-page-background, var(--page-background));
+    color:var(--about-text-color, var(--text-color));
+    font-family:var(--about-font-family, inherit);
+}
+/* Whole About page */
+.about-page{
+--about-page-background:var(--page-background);
+--about-text-color:var(--text-color);
+--about-font-family:inherit;
+--about-card-background:var(--section-background);
+--about-card-border:var(--border-color);
+}
+.about-layout{
+    width:min(1200px, 94%);
+    margin:2rem auto;
+    display:flex;
+    flex-direction:column;
+    gap:1.5rem;
+}
+/* Top section:
+   profile card on left,
+   introduction card on right */
+.about-layout__top{
+    display:grid;
+    grid-template-columns:minmax(240px, 0.8fr) minmax(0, 2fr);
+    gap:1.5rem;
+    align-items:stretch;
+}
+/* Shared card frame */
+.about-profile-card,
+.about-intro-card,
+.about-story-card,
+.about-favorites-card,
+.about-closing-card{
+    box-sizing:border-box;
+    background:var(--about-card-background, var(--section-background));
+    color:var(--about-text-color, var(--text-color));
+    border:1px solid var(--about-card-border, var(--border-color));
+    border-radius:1rem;
+    overflow:hidden;
+}
+/* Reusable dark card headings */
+.about-card-heading,
+.about-section-header{
+    margin:0;
+    padding:0.9rem 1.25rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:0.6rem;
+    background:var(--about-header-background);
+    color:var(--about-header-text);
+    text-align:center;
+}
+.about-section-header h2{
+    margin:0;
+    font-size:1.2rem;
+}
+/* Small icons beside headings */
+.about-card-icon,
+.about-section-header__icon{
+    width:2rem;
+    height:2rem;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    background:var(--about-icon-background);
+    color:var(--about-icon-text);
+    border-radius:50%;
+}
+/* Profile card */
+.about-profile-card{
+    display:flex;
+    flex-direction:column;
+}
+.about-profile-card__image{
+    min-height:330px;
+    margin:1rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--about-inner-background);
+    color:var(--about-inner-text);
+    border:1px dashed var(--about-card-border, var(--border-color));
+    border-radius:0.8rem;
+    text-align:center;
+    overflow:hidden;
+}
+.about-profile-card__image img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.about-profile-card__quote{
+    margin:0;
+    padding:0 1.25rem 1.25rem;
+    color:var(--about-inner-text);
+    text-align:center;
+    line-height:1.5;
+}
+/* Full-width About page correction */
+.about-page{
+    width:100%;
+}
+.about-layout{
+    width:100%;
+    max-width:none;
+    margin:0;
+    padding:1.5rem;
+    box-sizing:border-box;
+}
+/* Full-width top row */
+.about-layout__top{
+    width:100%;
+    grid-template-columns:minmax(260px, 0.8fr) minmax(0, 2fr);
+}
+/* Full-width middle row */
+.about-layout__middle{
+    width:100%;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+}
+/* Correct Favorites layout */
+.about-favorites-card{
+    width:100%;
+}
+.about-favorites-grid{
+    width:100%;
+    box-sizing:border-box;
+    display:grid;
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+    padding:1.5rem;
+}
+.about-favorite{
+    min-width:0;
+    min-height:150px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:1rem;
+    box-sizing:border-box;
+    text-align:center;
+}
+.about-profile-card,
+.about-intro-card,
+.about-story-card,
+.about-favorites-card,
+.about-closing-card{
+    text-align:center;
+}
+.about-intro-card__body,
+.about-story-card__body,
+.about-favorites-grid,
+.about-profile-card__quote{
+    text-align:center;
+}
+.about-highlight,
+.about-favorite{
+    text-align:center;
+    align-items:center;
+}
+.about-intro-card__description,
+.about-story-card__body p,
+.about-favorite p,
+.about-highlight p{
+    margin-left:auto;
+    margin-right:auto;
+}
+/* About page text sizes */
+.about-name-card__title{
+    font-size:3rem;
+}
+.about-name-card__eyebrow{
+    font-size:.9rem;
+}
+.about-intro-card__description{
+    font-size:1.3rem;
+}
+.about-highlight h3,
+.about-favorite h3{
+    font-size:1.30rem;
+}
+.about-highlight p,
+.about-favorite p{
+    font-size:1.3rem;
+}
+.about-card-heading,
+.about-section-header h2{
+    font-size:1.25rem;
+}
+.about-story-card__body h3{
+    font-size:1.3rem;
+}
+.about-story-card__body p,
+.about-profile-card__quote{
+    font-size:1.3rem;
+}
+.about-closing-card h2{
+    font-size:1.5rem;
+}
+.about-closing-card p{
+    font-size:1rem;
+}

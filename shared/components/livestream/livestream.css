@@ -5,7 +5,7 @@
     padding:2rem;
     border:1px solid;
     border-radius:1rem;
-    min-height:220px;
+    min-height:0;
 }
 .livestream__title{
     margin:0;
@@ -14,17 +14,20 @@
     margin:0;
 }
 .livestream__media{
-    flex:1;
+    flex:1 1 auto;
     display:flex;
     justify-content:center;
     align-items:center;
     border:1px dashed;
     border-radius:1rem;
-    min-height: 220px;
+    min-height: 0;
     width: 100%;
     box-sizing: border-box;
 }
 .livestream__buttons{
+    flex:0 0 auto;
     display:flex;
     justify-content:center;
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
 }

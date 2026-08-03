@@ -1,0 +1,62 @@
+:root{
+    --page-background:#fffcc9;
+    --section-background:#FFB81C;
+    --navigation-background:#FFB81C;
+
+    --button-background:#653818;
+    --button-text:#fff;
+    --button-hover:#653818;
+
+    --text-color:#000000;
+    --border-color:#000000;
+    --faq-answer-background: #fffcc9;
+    --faq-answer-text: #000000 ;
+    --faq-question-background: #A0522D;
+    --faq-question-text: #fff;
+
+    --schedule-page-background:#FFB81C;
+    --schedule-card-background:#FFB81C;
+    --schedule-text-color:#000000;
+    --schedule-heading-color: #000000;
+    --schedule-font-family:inherit;
+
+    --about-header-background:#653818;
+    --about-header-text:#ffffff;
+    --about-inner-background:#fff8b1;
+    --about-inner-text:#000000;
+    --about-accent-background:#eebc4e;
+    --about-accent-text:#000000;
+    --about-icon-background:#fff3a1;
+    --about-icon-text:#653818;
+    --about-closing-background:#653818;
+    --about-closing-text:#ffffff;
+
+    --community-page-background:var(--page-background);
+    --community-text-color:var(--text-color);
+    --community-font-family:inherit;
+    --community-intro-background:var(--section-background);
+    --community-intro-text:var(--text-color);
+    --community-card-background:var(--section-background);
+    --community-card-text:var(--text-color);
+    --community-header-background:var(--faq-question-background);
+    --community-header-text:var(--faq-question-text);
+    --community-art-background:var(--faq-answer-background);
+    --community-accent-background:var(--faq-answer-background);
+    --community-accent-text:var(--faq-answer-text);
+    
+}
+.navigation,
+.hero,
+.livestream,
+.next-up,
+.faq,
+.community,
+.calendar,
+.about-page__profile{
+    background:var(--section-background);
+    border-color:var(--border-color);
+}
+body{
+    background:var(--page-background);
+    color:var(--text-color);
+}

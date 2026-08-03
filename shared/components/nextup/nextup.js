@@ -13,7 +13,7 @@ function createNextUp(data){
             eventCard.innerHTML=`
             <p class="next-up__label">${event.label}</p>
             <h3 class="next-up__event-title">${event.title}</h3>
-            <p class="next-up__date">${event.ate}</p>
+            <p class="next-up__date">${event.date}</p>
             <p class="next-up__time">${event.time}</p>
         `;
         eventsArea.appendChild(eventCard);

@@ -1,0 +1,110 @@
+html,
+body{
+    margin:0;
+    padding:0;
+}
+body{
+    background:var(--page-background);
+    color:var(--text-color);
+}
+.faq-page{
+    width:100%;
+    box-sizing:border-box;
+    padding:2rem;
+}
+.faq-page__intro{
+    width: 100%;
+    margin:0 0 1.5rem;
+    padding:2rem;
+    box-sizing:border-box;
+    text-align:center;
+    background:var(--section-background);
+    border:1px solid var(--border-color);
+    border-radius:1rem;
+}
+.faq-page__intro h1{
+    margin:0.25rem 0 0.75rem;
+    font-size:clamp(2rem, 5vw, 3.5rem);
+}
+.faq-page__intro p{
+    margin:0;
+}
+.faq-page__eyebrow{
+    font-weight:bold;
+}
+.faq-page .faq{
+    width:100%;
+    margin:0 ;
+}
+.faq-question-card{
+    width:100%;
+    margin:1.5rem 0 0;
+    box-sizing:border-box;
+    overflow:hidden;
+    background:var(--section-background);
+    border:1px solid var(--border-color);
+    border-radius:1rem;
+}
+.faq-question-card__heading{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:1rem;
+    padding:1.25rem;
+    text-align:center;
+    background:var(--faq-question-background);
+    color:var(--faq-question-text);
+}
+.faq-question-card__heading span{
+    font-size:2rem;
+}
+.faq-question-card__heading p,
+.faq-question-card__heading h2{
+    margin:0;
+}
+.faq-question-form{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    padding:1.5rem;
+}
+.faq-question-form label{
+    display:flex;
+    flex-direction:column;
+    gap:0.4rem;
+    font-weight:bold;
+}
+.faq-question-form input,
+.faq-question-form textarea{
+    width:100%;
+    box-sizing:border-box;
+    padding:0.9rem 1rem;
+    font:inherit;
+    color:var(--text-color);
+    background:var(--faq-answer-background);
+    border:1px solid var(--border-color);
+    border-radius:0.75rem;
+}
+.faq-question-form textarea{
+    resize:vertical;
+}
+.faq-question-form .button{
+    align-self:center;
+}
+.faq-question-form__message{
+    margin:0;
+    padding:0 1.5rem 1.5rem;
+    text-align:center;
+    font-weight:bold;
+}
+@media (max-width:700px){
+    .faq-page{
+        padding:1rem;
+    }
+    .faq-page__intro{
+        padding:1.5rem 1rem;
+    }
+    .faq-question-card__heading{
+        flex-direction:column;
+    }
+}

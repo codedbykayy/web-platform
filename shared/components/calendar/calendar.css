@@ -1,0 +1,14 @@
+.calendar{
+    width:min(1400px, 96%);
+    margin:0 auto;
+    padding:1rem;
+    border:1px solid;
+    border-radius:1rem;
+    overflow:hidden;
+}
+.calendar iframe{
+    display:block;
+    width:100%;
+    min-height:700px;
+    border:0;
+}

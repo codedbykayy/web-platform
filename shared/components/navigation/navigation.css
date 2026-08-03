@@ -3,13 +3,16 @@
     grid-template-columns:auto 1fr auto;
     align-items:center;
     gap:2rem;
-    padding:1rem 2rem;
+    padding: 0rem 1rem;
     border:1px solid;
     border-radius:1rem;
 }
 .navigation__logo{
+    margin:0;
     display:flex;
     align-items:center;
+    font-size: 2rem;
+    font-weight: 700;
 }
 .navigation__pages{
     display:flex;
@@ -19,6 +22,7 @@
     width: 100%;
 }
 .navigation__link{
+    padding:0.55rem 0.9rem;
     text-decoration:none;
     color:inherit;
 }
@@ -27,9 +31,15 @@
     justify-content:flex-end;
     align-items: center;
 }
-.navigation__logo{
-    display: flex;
-    align-items: center;
-    font-size: 2rem;
-    font-weight: 700;
+.navigation__link--active{
+    background:var(
+        --navigation-active-background,
+        var(--button-background)
+    );
+    color:var(
+        --navigation-active-text,
+        var(--button-text)
+    );
+    border-radius:999px;
+    font-weight:700;
 }

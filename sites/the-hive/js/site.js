@@ -6,12 +6,13 @@ const bottomRow=document.createElement("div");
 bottomRow.className="bottom-row";
 const nextUpPanel = createNextUp(nextUp);
 bottomRow.appendChild(nextUpPanel);
-const faqPanel = createFAQ(faq);
-const communitySpace= document.createElement("section");
-communitySpace.className="community-space";
-communitySpace.textContent="Community"
+const faqPanel = createFAQ({
+    ...faq,
+    questions: faq.questions.slice(0, 5)
+});
+const communityPanel = createCommunity(community);
 bottomRow.appendChild(faqPanel);
-bottomRow.appendChild(communitySpace);
+bottomRow.appendChild(communityPanel);
 const liveSpace = createLivestream(livestream);
 topRow.appendChild(createHero(hero));
 topRow.appendChild(liveSpace);

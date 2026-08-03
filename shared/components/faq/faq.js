@@ -1,8 +1,11 @@
 function createFAQ(data){
     const faqPanel = document.createElement("section");
     faqPanel.className="faq";
-    faqPanel.innerHTML=`
-        <h2 class= "faq__title">${data.title}</h2>
+    faqPanel.innerHTML = `
+        ${data.showTitle === false
+            ? ""
+            : `<h2 class="faq_title">${data.title}</h2>`
+        }
         <div class="faq__questions"></div>
     `;
     const questionsContainer = faqPanel.querySelector(".faq__questions");

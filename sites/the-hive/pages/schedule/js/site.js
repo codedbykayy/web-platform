@@ -1,0 +1,11 @@
+const page= document.querySelector("#site");
+const navigationElement = createNavigation(navigation);
+const heading = document.createElement("h1");
+heading.textContent = "Stream Schedule";
+const schedulePage = document.createElement("section");
+schedulePage.className = "schedule-page";
+const calendarPanel = createCalendar(calendar.embedLink);
+page.appendChild(navigationElement);
+page.appendChild(heading);
+page.appendChild(calendarPanel);
+page.appendChild(schedulePage);

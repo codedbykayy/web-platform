@@ -1,0 +1,33 @@
+.community {
+    padding: clamp(0.75rem, 2vw, 1.5rem);
+    border: 1px solid;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    gap:clamp(0.5rem, 2vw, 1.5rem);
+}
+.community__title {
+   margin: 0;
+   text-align: left;
+   width: 100%;
+}
+.community__description {
+    flex:1;
+    min-height:0;
+    display:flex;
+    align-items:center;
+    font-size: 1rem;
+    margin:0;
+    padding:0;
+    text-align: center;
+    max-width: 600px;
+}
+.community__button {
+    display:flex;
+    justify-content:center;
+    align-self:center;
+}

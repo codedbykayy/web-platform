@@ -1,0 +1,487 @@
+html,
+body{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:var(
+        --gallery-page-background,
+        var(--page-background)
+    );
+
+    color:var(
+        --gallery-text-color,
+        var(--text-color)
+    );
+
+    font-family:var(
+        --gallery-font-family,
+        inherit
+    );
+}
+
+.gallery-page{
+    width:100%;
+    box-sizing:border-box;
+
+    padding:2rem;
+
+    display:flex;
+    flex-direction:column;
+    gap:1.5rem;
+}
+
+/* Page introduction */
+
+.gallery-page__intro{
+    width:100%;
+    box-sizing:border-box;
+
+    padding:2rem;
+
+    text-align:center;
+
+    background:var(
+        --gallery-intro-background,
+        var(--section-background)
+    );
+
+    color:var(
+        --gallery-intro-text,
+        var(--text-color)
+    );
+
+    border:1px solid var(--border-color);
+    border-radius:1rem;
+}
+
+.gallery-page__eyebrow{
+    margin:0 0 0.4rem;
+
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+}
+
+.gallery-page__intro h1{
+    margin:0 0 0.75rem;
+
+    font-size:clamp(2rem, 5vw, 3.5rem);
+}
+
+.gallery-page__description{
+    width:min(750px, 100%);
+    margin:0 auto;
+
+    line-height:1.6;
+}
+
+/* Shared Gallery sections */
+
+.gallery-featured,
+.gallery-clips,
+.gallery-fan-art{
+    width:100%;
+    box-sizing:border-box;
+
+    overflow:hidden;
+
+    background:var(
+        --gallery-section-background,
+        var(--section-background)
+    );
+
+    color:var(
+        --gallery-section-text,
+        var(--text-color)
+    );
+
+    border:1px solid var(--border-color);
+    border-radius:1rem;
+}
+
+.gallery-section-heading{
+    padding:1rem 1.25rem;
+
+    text-align:center;
+
+    background:var(
+        --gallery-header-background,
+        var(--faq-question-background)
+    );
+
+    color:var(
+        --gallery-header-text,
+        var(--faq-question-text)
+    );
+}
+
+.gallery-section-heading h2,
+.gallery-section-heading p{
+    margin:0;
+}
+
+.gallery-section-heading p{
+    margin-top:0.35rem;
+}
+
+/* Featured clip */
+
+.gallery-featured__layout{
+    padding:2rem;
+
+    display:grid;
+    grid-template-columns:minmax(0, 1.17fr) minmax(220px, 0.7fr);
+    gap:2rem;
+    align-items:center;
+    justify-content:center;
+}
+.gallery-featured__media{
+    width:min(100%, 1000px);
+    height: 420px;
+    margin:0 auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    background:var(
+        --gallery-media-background,
+        var(--faq-answer-background)
+    );
+
+    border:1px dashed var(--border-color);
+    border-radius:1rem;
+}
+
+.gallery-featured__media video,
+.gallery-featured__media img{
+    display:block;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.gallery-featured__content{
+    max-width: 320px;
+    display:flex;
+    justify-self:center ;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:1rem;
+}
+
+.gallery-featured__content h3,
+.gallery-featured__content p{
+    margin:0;
+}
+
+.gallery-featured__content h3{
+    font-size:clamp(1.6rem, 3vw, 2.5rem);
+}
+
+.gallery-featured__content p{
+    max-width:650px;
+    line-height:1.6;
+}
+
+/* External clip links */
+
+.gallery-clip-link{
+    position:relative;
+
+    color:inherit;
+    text-decoration:none;
+}
+
+.gallery-play-badge{
+    position:absolute;
+    left:50%;
+    bottom:1rem;
+
+    transform:translateX(-50%);
+
+    padding:0.6rem 1rem;
+
+    background:var(
+        --button-background,
+        var(--faq-question-background)
+    );
+
+    color:var(
+        --button-text,
+        var(--faq-question-text)
+    );
+
+    border-radius:999px;
+
+    font-weight:700;
+    white-space:nowrap;
+}
+
+/* Film strip */
+
+.gallery-film{
+    padding:2rem;
+
+    display:grid;
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+    gap:1rem;
+
+    background:var(
+        --gallery-film-background,
+        var(--button-background)
+    );
+}
+
+.gallery-film__frame{
+    min-width:0;
+    padding:1rem 0.75rem;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:0.75rem;
+
+    background:var(
+        --gallery-film-frame-background,
+        var(--section-background)
+    );
+
+    color:var(
+        --gallery-film-frame-text,
+        var(--text-color)
+    );
+
+    border-radius:0.5rem;
+}
+
+.gallery-film__media{
+    width:100%;
+    height:300px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    background:var(
+        --gallery-media-background,
+        var(--faq-answer-background)
+    );
+
+    border:1px dashed var(--border-color);
+    border-radius:0.5rem;
+}
+
+.gallery-film__media video,
+.gallery-film__media img{
+    display:block;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.gallery-film__caption{
+    width:100%;
+    min-height:3rem;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+}
+
+.gallery-film__caption h3{
+    margin:0;
+    font-size:1rem;
+}
+
+.gallery-film__hole{
+    width:80%;
+    height:0.65rem;
+
+    display:block;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 0.75rem,
+            var(--gallery-film-background, var(--button-background)) 0.75rem,
+            var(--gallery-film-background, var(--button-background)) 1.5rem
+        );
+}
+
+/* Fan-art instant photos */
+
+.gallery-fan-art__grid{
+    padding:3.5rem 2rem 2.5rem;
+
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 280px));
+    justify-content:center;
+    align-items:start;
+    gap:2rem;
+}
+
+.gallery-photo{
+    position:relative;
+
+    width:100%;
+    box-sizing:border-box;
+
+    padding:1rem 1rem 1.4rem;
+
+    background:var(
+        --gallery-photo-background,
+        var(--faq-answer-background)
+    );
+    color:var(
+        --gallery-photo-text,
+        var(--faq-answer-text)
+    );
+
+    border:1px solid var(--border-color);
+
+    box-shadow:0 0.65rem 1.2rem rgba(0, 0, 0, 0.16);
+}
+
+.gallery-photo--1{
+    transform:rotate(-2deg);
+}
+
+.gallery-photo--2{
+    transform:rotate(1.5deg);
+}
+
+.gallery-photo--3{
+    transform:rotate(-1deg);
+}
+
+.gallery-photo__tape{
+    position:absolute;
+    top:-1rem;
+    left:50%;
+
+    width:5rem;
+    height:1.8rem;
+
+    transform:translateX(-50%) rotate(-2deg);
+
+    background:var(
+        --gallery-tape-background,
+        rgba(255, 245, 190, 0.82)
+    );
+
+    border:1px solid rgba(0, 0, 0, 0.12);
+}
+
+.gallery-photo__image{
+    width:100%;
+    aspect-ratio:4 / 5;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    background:var(
+        --gallery-media-background,
+        var(--section-background)
+    );
+
+    border:1px dashed var(--border-color);
+}
+
+.gallery-photo__image img{
+    display:block;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.gallery-photo__caption{
+    padding-top:1rem;
+
+    text-align:center;
+}
+
+.gallery-photo__caption h3,
+.gallery-photo__caption p{
+    margin:0;
+}
+
+.gallery-photo__caption p{
+    margin-top:0.3rem;
+}
+
+/* Placeholders */
+
+.gallery-placeholder{
+    padding:1rem;
+
+    text-align:center;
+}
+
+/* Responsive layout */
+
+@media (max-width:1000px){
+
+    .gallery-film{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width:800px){
+
+    .gallery-featured__layout{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-featured__content{
+        align-items:center;
+        text-align:center;
+    }
+
+    .gallery-fan-art__grid{
+        grid-template-columns:minmax(0, 300px);
+    }
+}
+
+@media (max-width:550px){
+
+    .gallery-page{
+        padding:1rem;
+        gap:1rem;
+    }
+
+    .gallery-page__intro{
+        padding:1.5rem 1rem;
+    }
+
+    .gallery-featured__layout,
+    .gallery-film{
+        padding:1rem;
+    }
+
+    .gallery-film{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-fan-art__grid{
+        padding:3rem 1.25rem 2rem;
+    }
+}
