@@ -31,3 +31,28 @@
     padding-top:0.5rem;
     padding-bottom:0.5rem;
 }
+@media (max-width:700px){
+
+    .livestream{
+        width:100%;
+        min-width:0;
+        box-sizing:border-box;
+    }
+
+    .livestream__media{
+        width:100%;
+        min-height:220px;
+    }
+
+    .livestream__buttons{
+        width:100%;
+        flex-wrap:wrap;
+        gap:0.75rem;
+        padding:0.75rem;
+        box-sizing:border-box;
+    }
+
+    .livestream__buttons > *{
+        max-width:100%;
+    }
+}

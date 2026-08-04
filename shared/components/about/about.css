@@ -202,19 +202,7 @@ body{
     line-height:1.45;
 }
 /* Decorative flower underlay */
-.about-intro__flowers{
-    position:absolute;
-    left:50%;
-    bottom:-1.5rem;
-    width:150%;
-    height:200%;
-    transform:translateX(-50%);
-    object-fit:contain;
-    object-position:center bottom;
-    display:block;
-    pointer-events:none;
-    z-index:0;
-}
+
 /* Story card */
 
 .about-story-card__body{
@@ -277,17 +265,73 @@ body{
         width:110%;
         height:38%;
     }
+    .about-layout{
+    width:100%;
+    padding:1rem;
+    gap:1rem;
+    }
+
+    .about-layout__top,
+    .about-layout__middle{
+        width:100%;
+        grid-template-columns:1fr;
+        gap:1rem;
+    }
+
+    .about-profile-card,
+    .about-intro-card,
+    .about-story-card,
+    .about-favorites-card,
+    .about-closing-card{
+        width:100%;
+        min-width:0;
+    }
+
+    .about-favorites-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap:0.75rem;
+        padding:1rem;
+    }
+
+    .about-favorite{
+        min-width:0;
+        padding:0.5rem;
+    }
+
+    .about-intro-card__description{
+        width:100%;
+        max-width:100%;
+        padding:0 0.5rem;
+        box-sizing:border-box;
+    }
+
+    .about-intro__flowers{
+        width:110%;
+        height:auto;
+        max-height:38%;
+        object-fit:contain;
+        object-position:center bottom;
+    }
+}
+@media (max-width:500px){
+
+    .about-favorites-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-name-card__title{
+        font-size:2.25rem;
+    }
+
+    .about-intro-card__description,
+    .about-highlight p,
+    .about-favorite p,
+    .about-story-card__body p,
+    .about-profile-card__quote{
+        font-size:1rem;
+    }
 }
 .about-intro-card__body{
     position:relative;
     isolation:isolate;
-}
-
-.about-intro-card__body > *:not(.about-intro__flowers){
-    position:relative;
-    z-index:2;
-}
-
-.about-intro__flowers{
-    z-index:1;
 }

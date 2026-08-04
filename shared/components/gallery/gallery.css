@@ -484,4 +484,41 @@ body{
     .gallery-fan-art__grid{
         padding:3rem 1.25rem 2rem;
     }
+    .gallery-page{
+    width:100%;
+    max-width:100%;
+    box-sizing:border-box;
+    overflow:hidden;
+    }
+
+    .gallery-page__intro{
+        width:100%;
+        box-sizing:border-box;
+    }
+
+    .gallery-featured__layout{
+        grid-template-columns:1fr;
+        width:100%;
+        min-width:0;
+    }
+
+    .gallery-film{
+        grid-template-columns:1fr;
+        width:100%;
+        min-width:0;
+    }
+
+    .gallery-fan-art__grid{
+        grid-template-columns:1fr;
+        width:100%;
+        padding:1rem;
+        box-sizing:border-box;
+    }
+
+    .gallery-film > *,
+    .gallery-featured__layout > *,
+    .gallery-fan-art__grid > *{
+        min-width:0;
+        max-width:100%;
+    }
 }
