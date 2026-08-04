@@ -592,3 +592,30 @@ body{
         transform:none;
     }
 }
+@media (max-width:700px){
+
+    .community-page{
+        width:100%;
+        max-width:100%;
+        padding:1rem;
+        box-sizing:border-box;
+
+        display:grid;
+        grid-template-columns:1fr;
+        gap:1rem;
+    }
+
+    .community-page > *{
+        width:100%;
+        max-width:100%;
+        min-width:0;
+        box-sizing:border-box;
+    }
+
+    .community-card{
+        width:100%;
+        max-width:100%;
+        min-width:0;
+        box-sizing:border-box;
+    }
+}
