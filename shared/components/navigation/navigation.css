@@ -43,3 +43,15 @@
     border-radius:999px;
     font-weight:700;
 }
+.navigation__logo{
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+    text-decoration:none;
+}
+.navigation__logo-image{
+    width:3rem;
+    height:3rem;
+    object-fit:contain;
+    flex-shrink:0;
+}

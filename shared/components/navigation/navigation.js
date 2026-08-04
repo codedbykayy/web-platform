@@ -12,14 +12,17 @@ function createNavigation(data){
         const logoArea = navigation.querySelector(".navigation__logo");
         const pagesArea= navigation.querySelector(".navigation__pages");
         const actionArea= navigation.querySelector(".navigation__action");
-        if (data.logo.image){
-            const logo= document.createElement("img");
-            logo.src=data.logo.image;
-            logo.alt=data.logo.alt||"";
-            logoArea.appendChild(logo);
-            logoArea.href= new URL(data.logo.link, siteRoot).href;
-        } else {
-            logoArea.textContent=data.logo.text;
+        logoArea.href = new URL(data.logo.link, siteRoot).href;
+        const logoText = document.createElement("span");
+        logoText.className = "navigation__logo-text";
+        logoText.textContent = data.logo.text;
+        logoArea.appendChild(logoText);
+        if (data.logo.image) {
+            const logoImage = document.createElement("img");
+            logoImage.className = "navigation__logo-image";
+            logoImage.src = new URL(data.logo.image, siteRoot).href;
+            logoImage.alt = data.logo.alt || "";
+            logoArea.appendChild(logoImage);
         }
         data.pages.forEach((page)=>{
             const link = document.createElement("a");

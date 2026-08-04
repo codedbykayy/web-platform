@@ -19,15 +19,28 @@
     gap:1rem;
 }
 .hero__image-area{
-    min-height: 220px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border: 1px dashed;
-    border-radius: 1rem;
-    width: 100%;
-    box-sizing: border-box;
+    position:relative;
+    overflow:hidden;
+    min-width:0;
+}
+
+.hero__image{
+    position:absolute;
+
+    left:50%;
+    top:10%;
+
+    width:420px;
+    height:auto;
+
+    max-width:none;
+    max-height:none;
+    min-width:0;
+
+    transform:translateX(-50%);
+    object-fit:contain;
+    display:block;
+    flex:none;
 }
 .hero__title{
     margin: 0;

@@ -1,7 +1,9 @@
 const navigation = {
     logo: {
         text:"honeybee",
-        alt:"The Hive"
+        image:"assets/honeybee.png",
+        alt:"honeybee",
+        link:"index.html"
     },
     pages: [
         {label: "Home", link:"index.html"},

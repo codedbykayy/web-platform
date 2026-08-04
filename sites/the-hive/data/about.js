@@ -2,9 +2,8 @@ const about = {
     profile: {
         heading: "The Creator",
         headingIcon: "🐝",
-        image: "",
-        imageAlt: "Profile image",
-        imagePlaceholder: "Profile image",
+        image: "../../assets/aboutmegirl.png",
+        imageAlt: "portrait",
         quote:
             "Thanks for being part of the hive. You make this community what it is!"
     },
@@ -29,8 +28,10 @@ const about = {
                 icon: "🌙",
                 title: "Evening Streams",
                 text: "Most streams start in the evening"
-            }
-        ]
+            },
+        ],
+        image:"../../assets/flowers.png",
+        imageAlt:"flowers"
     },
     storyCards: [
         {

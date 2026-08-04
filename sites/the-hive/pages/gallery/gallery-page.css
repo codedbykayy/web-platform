@@ -1,0 +1,22 @@
+.gallery-page{
+    position:relative;
+}
+
+.gallery-starbee{
+    position:absolute;
+
+    left:6rem;
+    bottom:0%;
+    width:300px;
+    height:auto;
+    transform:translateY(-50%);
+    display:block;
+    pointer-events:none;
+    z-index:2;
+}
+.gallery-starbee--right{
+    left:auto;
+    right:6rem;
+
+    transform:translateY(-50%) scaleX(-1);
+}

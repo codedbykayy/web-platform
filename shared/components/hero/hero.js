@@ -8,7 +8,19 @@ function createHero(data) {
             <p class="hero__description">${data.description}</p>
             <div class="hero__buttons"></div>
         </div>
-        <div class="hero-image-area">Image</div>
+        <div class="hero-image-area">
+            ${
+                data.image
+                    ? `
+                        <img
+                            class="hero__image"
+                            src="${data.image}"
+                            alt="${data.imageAlt || ""}"
+                        >
+                    `
+                    : "Image"
+            }
+        </div>
         <div class="hero_decorations"></div>
     `;
 

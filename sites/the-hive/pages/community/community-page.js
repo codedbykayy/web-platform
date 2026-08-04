@@ -185,8 +185,12 @@ communityPage.innerHTML = `
                 </a>
             </div>
         </section>
-
     </div>
 `;
+const thanksBee = document.createElement("img");
+thanksBee.className = "community-thanksbee";
+thanksBee.src = "../../assets/thanksbee.png";
+thanksBee.alt = "";
+communityPage.appendChild(thanksBee);
 page.appendChild(navigationElement);
 page.appendChild(communityPage);

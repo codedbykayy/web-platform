@@ -111,6 +111,17 @@ function createAbout(data) {
                         <div class="about-highlights">
                             ${highlightsHTML}
                         </div>
+                        ${
+                            data.intro.image
+                                ? `
+                                    <img
+                                        class="about-intro__flowers"
+                                        src="${data.intro.image}"
+                                        alt="${data.intro.imageAlt || ""}"
+                                    >
+                                `
+                                : ""
+                        }
                     </div>
 
                 </article>

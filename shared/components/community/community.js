@@ -2,8 +2,24 @@ function createCommunity(data){
     const communityPanel = document.createElement("section");
     communityPanel.className="community";
     communityPanel.innerHTML=`
-        <h2 class= "community__title">${data.title}</h2>
-        <p class="community__description">${data.description}</p>
+        <h2 class="community__title">${data.title}</h2>
+        <div class="community__feature">
+            ${
+                data.image
+                    ? `
+                        <img
+                            class="community__image"
+                            src="${data.image}"
+                            alt="${data.imageAlt || ""}"
+                        >
+                    `
+                    : ""
+            }
+
+            <p class="community__description">
+                ${data.description}
+            </p>
+        </div>
         <a href="${data.button.link}" class="button community__button">${data.button.label}</a>
     `;
     return communityPanel;

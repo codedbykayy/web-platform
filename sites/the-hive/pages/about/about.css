@@ -1,0 +1,33 @@
+.about-intro-card__body > *:not(.about-intro__flowers){
+    position:relative;
+    z-index:2;
+}
+.about-intro__flowers{
+    position:absolute;
+    left:50%;
+    bottom:-1.5rem;
+    width:150%;
+    height:200%;
+    transform:translateX(-50%);
+    object-fit:contain;
+    object-position:center bottom;
+    display:block;
+    pointer-events:none;
+    z-index:0;
+}
+.about-page{
+    position:relative;
+}
+
+.about-heartbee{
+    position:absolute;
+    left:25%;
+    bottom:1.5rem;
+
+    width:180px;
+    height:auto;
+
+    display:block;
+    pointer-events:none;
+    z-index:2;
+}

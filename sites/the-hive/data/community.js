@@ -1,7 +1,7 @@
 const community = {
     title: "Community",
     description: "This is more than a stream-it's a hive. Come chat, join community events, share your creations, win giveaways, and connect with other members of the Hive.",
-    image:"",
+    image:"assets/hivehouse.png",
     button:{
         label: "Join our Discord",
         link:"#"

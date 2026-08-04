@@ -1,5 +1,10 @@
 const page = document.querySelector("#site");
 const navigationElement = createNavigation(navigation);
 const aboutElement = createAbout(about);
+const heartBee = document.createElement("img");
+heartBee.className = "about-heartbee";
+heartBee.src = "../../assets/heartbee.png";
+heartBee.alt = "";
+aboutElement.appendChild(heartBee);
 page.appendChild(navigationElement);
 page.appendChild(aboutElement);

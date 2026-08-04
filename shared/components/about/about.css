@@ -149,6 +149,8 @@ body{
     box-sizing:border-box;
     text-align:center;
 }
+/* Shared About page alignment */
+
 .about-profile-card,
 .about-intro-card,
 .about-story-card,
@@ -156,50 +158,102 @@ body{
 .about-closing-card{
     text-align:center;
 }
-.about-intro-card__body,
-.about-story-card__body,
-.about-favorites-grid,
-.about-profile-card__quote{
+/* Introduction card */
+.about-intro-card__body{
+    position:relative;
+    overflow:hidden;
+    min-height:500px;
+    padding:2rem 2rem 7rem;
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.about-intro-card__description{
+    position:relative;
+    max-width:900px;
+    margin:0 auto 2rem;
+    font-size:1.3rem;
+    line-height:1.6;
+}
+.about-intro-highlights{
+    position:relative;
+    z-index:2;
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:1.5rem;
+}
+.about-highlight{
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     text-align:center;
 }
-.about-highlight,
+.about-highlight h3{
+    margin:0.35rem 0;
+
+    font-size:1.3rem;
+}
+.about-highlight p{
+    margin:0;
+    font-size:1.3rem;
+    line-height:1.45;
+}
+/* Decorative flower underlay */
+.about-intro__flowers{
+    position:absolute;
+    left:50%;
+    bottom:-1.5rem;
+    width:150%;
+    height:200%;
+    transform:translateX(-50%);
+    object-fit:contain;
+    object-position:center bottom;
+    display:block;
+    pointer-events:none;
+    z-index:0;
+}
+/* Story card */
+
+.about-story-card__body{
+    text-align:center;
+}
+.about-story-card__body h3{
+    font-size:1.3rem;
+}
+.about-story-card__body p{
+    margin-left:auto;
+    margin-right:auto;
+
+    font-size:1.3rem;
+}
+/* Favorites */
 .about-favorite{
     text-align:center;
     align-items:center;
 }
-.about-intro-card__description,
-.about-story-card__body p,
-.about-favorite p,
-.about-highlight p{
+.about-favorite h3{
+    font-size:1.3rem;
+}
+.about-favorite p{
     margin-left:auto;
     margin-right:auto;
+
+    font-size:1.3rem;
 }
-/* About page text sizes */
+/* Remaining text sizes */
 .about-name-card__title{
     font-size:3rem;
 }
 .about-name-card__eyebrow{
-    font-size:.9rem;
-}
-.about-intro-card__description{
-    font-size:1.3rem;
-}
-.about-highlight h3,
-.about-favorite h3{
-    font-size:1.30rem;
-}
-.about-highlight p,
-.about-favorite p{
-    font-size:1.3rem;
+    font-size:0.9rem;
 }
 .about-card-heading,
 .about-section-header h2{
     font-size:1.25rem;
 }
-.about-story-card__body h3{
-    font-size:1.3rem;
-}
-.about-story-card__body p,
 .about-profile-card__quote{
     font-size:1.3rem;
 }
@@ -208,4 +262,32 @@ body{
 }
 .about-closing-card p{
     font-size:1rem;
+}
+/* Smaller screens */
+@media (max-width:800px){
+    .about-intro-card__body{
+        min-height:auto;
+        padding:1.5rem 1rem 8rem;
+    }
+    .about-intro-highlights{
+        grid-template-columns:1fr;
+        gap:1rem;
+    }
+    .about-intro__flowers{
+        width:110%;
+        height:38%;
+    }
+}
+.about-intro-card__body{
+    position:relative;
+    isolation:isolate;
+}
+
+.about-intro-card__body > *:not(.about-intro__flowers){
+    position:relative;
+    z-index:2;
+}
+
+.about-intro__flowers{
+    z-index:1;
 }
