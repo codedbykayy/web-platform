@@ -568,54 +568,55 @@ body{
     margin:0;
     transform: translateY(-0.75rem);
 }
-@media (max-width:700px){
-
-    .community{
-        width:100%;
-        max-width:100%;
-        min-width:0;
-        box-sizing:border-box;
+@media (max-width: 700px) {
+    .community-page {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
-
-    .community__description{
-        position:static;
-        width:100%;
-        max-width:none;
-        transform:none;
-        margin:0;
-        padding:1rem;
-        box-sizing:border-box;
+    .community-page > * {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
     }
-
-    .community__button{
-        margin:1rem auto 0;
-        transform:none;
+    .community {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        min-height: 650px;
+        overflow: hidden;
+        box-sizing: border-box;
     }
-}
-@media (max-width:700px){
-
-    .community-page{
-        width:100%;
-        max-width:100%;
-        padding:1rem;
-        box-sizing:border-box;
-
-        display:grid;
-        grid-template-columns:1fr;
-        gap:1rem;
+    .community img {
+        position: absolute;
+        width: 85%;
+        max-width: none;
+        height: auto;
+        left: 50%;
+        top: 7rem;
+        transform: translateX(-50%);
+        opacity: 0.45;
     }
-
-    .community-page > *{
-        width:100%;
-        max-width:100%;
-        min-width:0;
-        box-sizing:border-box;
+    .community__description {
+        position: relative;
+        z-index: 2;
+        width: 82%;
+        max-width: none;
+        margin: 2rem auto 0;
+        padding: 1rem;
+        transform: none;
+        text-align: center;
+        line-height: 1.4;
+        box-sizing: border-box;
     }
-
-    .community-card{
-        width:100%;
-        max-width:100%;
-        min-width:0;
-        box-sizing:border-box;
+    .community__button {
+        position: absolute;
+        z-index: 3;
+        left: 50%;
+        bottom: 1.5rem;
+        margin: 0;
+        transform: translateX(-50%);
     }
 }

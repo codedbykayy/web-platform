@@ -438,115 +438,97 @@ body{
 
 /* Responsive layout */
 
-@media (max-width:1000px){
-
-    .gallery-film{
-        grid-template-columns:repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width:800px){
-
-    .gallery-featured__layout{
-        grid-template-columns:1fr;
-    }
-
-    .gallery-featured__content{
-        align-items:center;
-        text-align:center;
-    }
-
-    .gallery-fan-art__grid{
-        grid-template-columns:minmax(0, 300px);
-    }
-}
-
-@media (max-width:550px){
-
-    .gallery-page{
-        padding:1rem;
-        gap:1rem;
-    }
-
-    .gallery-page__intro{
-        padding:1.5rem 1rem;
-    }
-
-    .gallery-featured__layout,
-    .gallery-film{
-        padding:1rem;
-    }
-
-    .gallery-film{
-        grid-template-columns:1fr;
-    }
-
-    .gallery-fan-art__grid{
-        padding:3rem 1.25rem 2rem;
-    }
-    .gallery-page{
-    width:100%;
-    max-width:100%;
-    box-sizing:border-box;
-    overflow:hidden;
-    }
-
-    .gallery-page__intro{
-        width:100%;
-        box-sizing:border-box;
-    }
-
-    .gallery-featured__layout{
-        grid-template-columns:1fr;
-        width:100%;
-        min-width:0;
-    }
-
-    .gallery-film{
-        grid-template-columns:1fr;
-        width:100%;
-        min-width:0;
-    }
-
-    .gallery-fan-art__grid{
-        grid-template-columns:1fr;
-        width:100%;
-        padding:1rem;
-        box-sizing:border-box;
-    }
-
-    .gallery-film > *,
-    .gallery-featured__layout > *,
-    .gallery-fan-art__grid > *{
-        min-width:0;
-        max-width:100%;
-    }
-}
 @media (max-width: 700px) {
-    .gallery-page,
+    .gallery-page {
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    .gallery-page__intro,
     .gallery-featured,
-    .gallery-highlights {
+    .gallery-highlights,
+    .gallery-fan-art {
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
+    }
+    .gallery-page__intro {
+        padding: 1.5rem 1rem;
     }
     .gallery-featured {
         padding: 0;
         overflow: hidden;
     }
-    .gallery-featured h2,
-    .gallery-featured p {
+    .gallery-featured__layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
         max-width: 100%;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 1rem;
         box-sizing: border-box;
-        overflow-wrap: break-word;
     }
-    .gallery-featured-media {
-        width: calc(100% - 2rem);
+    .gallery-featured__content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 1rem;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .gallery-featured__content h2,
+    .gallery-featured__content p {
+        width: 100%;
         max-width: 100%;
         margin-left: auto;
         margin-right: auto;
+        overflow-wrap: break-word;
+    }
+    .gallery-featured-media,
+    .gallery-film__media {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 16 / 9;
+        box-sizing: border-box;
+    }
+    .gallery-film {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+        gap: 1rem;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+    .gallery-film > * {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+    .gallery-film h2,
+    .gallery-film h3,
+    .gallery-film p {
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        overflow-wrap: break-word;
+        box-sizing: border-box;
+    }
+    .gallery-fan-art__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+        gap: 1rem;
+    }
+    .gallery-fan-art__grid > * {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
         box-sizing: border-box;
     }
 }
