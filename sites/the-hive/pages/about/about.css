@@ -41,13 +41,3 @@
         transform: none;
     }
 }
-@media (max-width: 700px) {
-    .community-thanksbee {
-        position: static;
-        display: block;
-        width: 150px;
-        height: auto;
-        margin: 1rem auto 0;
-        transform: none;
-    }
-}
