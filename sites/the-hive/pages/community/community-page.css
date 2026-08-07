@@ -12,3 +12,11 @@
     pointer-events:none;
     z-index:2;
 }
+@media (max-width: 700px) {
+    .community-thanksbee {
+        width: 150px;
+        left: -20px;
+        top: 280px;
+        transform: none;
+    }
+}

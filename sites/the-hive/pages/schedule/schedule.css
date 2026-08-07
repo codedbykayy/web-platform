@@ -43,3 +43,15 @@
     right:-6rem;
     top:-6rem;
 }
+@media (max-width: 700px) {
+    .schedule-honeycomb--large {
+        width: 170px;
+        left: -3rem;
+        bottom: -3rem;
+    }
+    .schedule-honeycomb--small {
+        width: 90px;
+        right: -2rem;
+        top: -2rem;
+    }
+}

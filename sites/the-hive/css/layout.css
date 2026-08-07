@@ -45,3 +45,40 @@ body{
     border-radius: 1.5rem;
     padding: 2rem;
 }
+@media (max-width: 700px) {
+    #site {
+        padding: 0.75rem;
+        gap: 0.75rem;
+    }
+    .top-row {
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 0.75rem;
+    }
+    .bottom-row {
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 0.75rem;
+    }
+    .top-row > *,
+    .bottom-row > * {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+    }
+    .hero {
+        order: 1;
+    }
+    .live-space {
+        order: 2;
+    }
+    .next-up {
+        order: 1;
+    }
+    .faq {
+        order: 2;
+    }
+    .community {
+        order: 3;
+    }
+}

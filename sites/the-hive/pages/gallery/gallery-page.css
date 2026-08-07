@@ -20,3 +20,16 @@
 
     transform:translateY(-50%) scaleX(-1);
 }
+@media (max-width: 700px) {
+    .gallery-starbee,
+    .gallery-starbee--right {
+        width: 140px;
+    }
+    .gallery-starbee {
+        left: -25px;
+    }
+    .gallery-starbee--right {
+        left: auto;
+        right: -25px;
+    }
+}
