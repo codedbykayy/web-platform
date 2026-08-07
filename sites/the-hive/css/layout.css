@@ -66,6 +66,15 @@ body{
         min-width: 0;
         height: auto;
     }
+    .bottom-row {
+    align-items: start;
+    }
+
+    .faq-space {
+        height: fit-content;
+        min-height: 0;
+        align-self: start;
+    }
     .hero {
         order: 1;
     }
