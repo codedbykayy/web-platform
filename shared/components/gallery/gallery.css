@@ -452,13 +452,14 @@ body{
     .gallery-fan-art {
         width: 100%;
         max-width: 100%;
+        min-width: 0;
         box-sizing: border-box;
     }
     .gallery-page__intro {
         padding: 1.5rem 1rem;
     }
+    /* Featured clip section */
     .gallery-featured {
-        padding: 0;
         overflow: hidden;
     }
     .gallery-featured__layout {
@@ -466,6 +467,8 @@ body{
         grid-template-columns: 1fr;
         width: 100%;
         max-width: 100%;
+        min-width: 0;
+        gap: 1rem;
         padding: 1rem;
         box-sizing: border-box;
     }
@@ -485,8 +488,7 @@ body{
         margin-right: auto;
         overflow-wrap: break-word;
     }
-    .gallery-featured-media,
-    .gallery-film__media {
+    .gallery-featured-media {
         width: 100%;
         max-width: 100%;
         height: auto;
@@ -494,11 +496,13 @@ body{
         aspect-ratio: 16 / 9;
         box-sizing: border-box;
     }
+    /* More Hive Highlights clip cards */
     .gallery-film {
         display: grid;
         grid-template-columns: 1fr;
         width: 100%;
         max-width: 100%;
+        min-width: 0;
         gap: 1rem;
         padding: 1rem;
         box-sizing: border-box;
@@ -509,21 +513,33 @@ body{
         min-width: 0;
         box-sizing: border-box;
     }
+    .gallery-film__media {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 16 / 9;
+        box-sizing: border-box;
+    }
     .gallery-film h2,
     .gallery-film h3,
     .gallery-film p {
+        width: 100%;
         max-width: 100%;
         padding-left: 1rem;
         padding-right: 1rem;
         overflow-wrap: break-word;
         box-sizing: border-box;
     }
+    /* Fan art: stack cards, but preserve their existing photo proportions */
     .gallery-fan-art__grid {
         display: grid;
         grid-template-columns: 1fr;
         width: 100%;
         max-width: 100%;
+        min-width: 0;
         gap: 1rem;
+        box-sizing: border-box;
     }
     .gallery-fan-art__grid > * {
         width: 100%;
