@@ -33,9 +33,21 @@
 }
 @media (max-width: 700px) {
     .about-heartbee {
+        position: static;
+        display: block;
         width: 130px;
-        left: 50%;
-        bottom: -20px;
-        transform: translateX(-50%);
+        height: auto;
+        margin: 1rem auto 0;
+        transform: none;
+    }
+}
+@media (max-width: 700px) {
+    .community-thanksbee {
+        position: static;
+        display: block;
+        width: 150px;
+        height: auto;
+        margin: 1rem auto 0;
+        transform: none;
     }
 }
