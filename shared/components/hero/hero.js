@@ -23,7 +23,27 @@ function createHero(data) {
         </div>
         <div class="hero_decorations"></div>
     `;
+const title = hero.querySelector(".hero__title");
 
+if (data.colorfulTitle) {
+    title.textContent = "";
+
+    let colorIndex = 0;
+
+    [...data.title].forEach((character) => {
+        const letter = document.createElement("span");
+
+        if (character === " ") {
+            letter.innerHTML = "&nbsp;";
+        } else {
+            letter.className = `hero__title-letter hero__title-letter--${colorIndex % 4}`;
+            letter.textContent = character;
+            colorIndex++;
+        }
+
+        title.appendChild(letter);
+    });
+}
     const buttonArea = hero.querySelector(".hero__buttons");
 
     (data.buttons || []).forEach((button) => {

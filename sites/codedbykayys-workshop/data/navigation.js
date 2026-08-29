@@ -1,8 +1,8 @@
 const navigation = {
     logo: {
         text:"",
-        image:"",
-        alt:"",
+        image:"assets/moonbox.png",
+        alt:"Moonbox logo",
         link:"index.html"
     },
     pages: [

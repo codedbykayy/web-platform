@@ -1,0 +1,95 @@
+.homepage-feature-link {
+    position: relative;
+    min-height: 82px;
+    padding: 1rem 1.4rem;
+    border: 2px solid var(--border-color);
+    border-radius: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    box-shadow:
+        0 3px 0 rgba(101, 67, 79, 0.18),
+        inset 0 0 0 5px rgba(255, 255, 255, 0.18);
+    overflow: hidden;
+}
+/* stitched inner border */
+.homepage-feature-link::before {
+    content: "";
+    position: absolute;
+    inset: 7px;
+    border: 2px dashed rgba(101, 67, 79, 0.55);
+    border-radius: 0.95rem;
+    pointer-events: none;
+}
+/* subtle fabric texture */
+.homepage-feature-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.06) 0px,
+            rgba(255, 255, 255, 0.06) 1px,
+            transparent 1px,
+            transparent 4px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(90, 60, 70, 0.04) 0px,
+            rgba(90, 60, 70, 0.04) 1px,
+            transparent 1px,
+            transparent 4px
+        );
+    pointer-events: none;
+}
+.homepage-feature-left .homepage-feature-link:nth-child(1) {
+    border-radius: 1.6rem 1.2rem 1.5rem 1.1rem;
+}
+.homepage-feature-left .homepage-feature-link:nth-child(2) {
+    border-radius: 1.2rem 1.7rem 1.1rem 1.5rem;
+}
+.homepage-feature-right .homepage-feature-link:nth-child(1) {
+    border-radius: 1.5rem 1.1rem 1.7rem 1.2rem;
+}
+.homepage-feature-right .homepage-feature-link:nth-child(2) {
+    border-radius: 1.1rem 1.5rem 1.2rem 1.7rem;
+}
+.homepage-feature-link:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 5px 0 rgba(101, 67, 79, 0.18),
+        inset 0 0 0 5px rgba(255, 255, 255, 0.2);
+}
+.homepage-feature-link {
+    isolation: isolate;
+}
+.homepage-feature-link::before,
+.homepage-feature-link::after {
+    z-index: -1;
+}
+/* Workshop header logo */
+.navigation__logo-image {
+    width: 4.5rem;
+    height: 4.5rem;
+    object-fit: contain;
+}
+/* Heart directly before Etsy button */
+.navigation__action {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.navigation__action::before {
+    content: "";
+    display: block;
+
+    width: 3rem;
+    height: 3rem;
+
+    background-image: url("../assets/fabricheart.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    flex-shrink: 0;
+}

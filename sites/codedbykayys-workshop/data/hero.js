@@ -5,4 +5,5 @@ const hero = {
     
     //do not edit what's below this line!!
     layout:"stacked",
+    colorfulTitle: true,
 };

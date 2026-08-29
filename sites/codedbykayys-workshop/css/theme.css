@@ -1,0 +1,114 @@
+@font-face {
+    font-family: "Stitch Party";
+    src: url("../assets/StitchParty.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+:root {
+    /* Main surfaces */
+    --page-background: #F6D4C2;
+    --section-background: #FFF4E8;
+    /* Navigation */
+    --navigation-background: #FE93AD;
+    --navigation-active-background: #D96E91;
+    --navigation-active-text: #FFF7F2;
+    /* Default shared button fallback */
+    --button-background: #FE93AD;
+    --button-text: #65434F;
+    --button-hover: #ED829F;
+    --text-color: #65434F;
+    --border-color: #A66F7D;
+    /* Workshop homepage patches */
+    --workshop-shop: #C5F0FA;
+    --workshop-gallery: #FFEEA8;
+    --workshop-request: #EB7B97;
+    --workshop-faq: #A280BF;
+}
+.hero {
+    border-color: transparent;
+}
+.hero--stacked .hero__title {
+    font-family: "Stitch Party", sans-serif;
+    font-size: 3.7rem;
+    font-weight: normal;
+    line-height: 1.05;
+    text-align: center;
+}
+.hero--stacked .hero__description {
+    font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #B96F7F;
+    max-width: 42rem;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+.hero--stacked .hero__content {
+    gap: 0.6rem;
+}
+body {
+    background: var(--page-background);
+    color: var(--text-color);
+}
+.homepage-feature-area {
+    background: var(--section-background);
+}
+.navigation {
+    background: var(--navigation-background);
+    border-color: var(--border-color);
+}
+.homepage-feature-left .homepage-feature-link:nth-child(1) {
+    --button-background: var(--workshop-shop);
+}
+.homepage-feature-left .homepage-feature-link:nth-child(2) {
+    --button-background: var(--workshop-gallery);
+}
+.homepage-feature-right .homepage-feature-link:nth-child(1) {
+    --button-background: var(--workshop-request);
+}
+.homepage-feature-right .homepage-feature-link:nth-child(2) {
+    --button-background: var(--workshop-faq);
+}
+.hero__title-letter--0 {
+    color: #D9688B;
+}
+.hero__title-letter--1 {
+    color: #EFAE68;
+}
+.hero__title-letter--2 {
+    color: #9B82C0;
+}
+.hero__title-letter--3 {
+    color: #87C4D5;
+}
+@media (max-width: 700px) {
+    .hero--stacked .hero__title {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 700px) {
+    .hero--stacked .hero__description {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+}
+@media (max-width: 700px) {
+    .homepage-decor__item {
+        transform: scale(0.65);
+    }
+    .homepage-decor__item--top-left,
+    .homepage-decor__item--top-right,
+    .homepage-decor__item--bottom-left {
+        display: none;
+    }
+    .navigation__logo-image {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+    .navigation__action::before {
+        width: 2rem;
+        height: 2rem;
+    }
+}
