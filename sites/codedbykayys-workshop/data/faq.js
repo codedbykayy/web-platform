@@ -23,7 +23,7 @@ const faq={
     },
     {
         question: "What's the top thing you want to learn next?",
-        answer: "Animation!! I'll be so excited to release more and more polished animated adopts to start before then incorparting animation into my websites!"
+        answer: "Animation!! I'll be so excited to release more and more polished animated adopts to start before incorporating animation into my websites!"
     },
     {
         question: "What can I commission you for?",

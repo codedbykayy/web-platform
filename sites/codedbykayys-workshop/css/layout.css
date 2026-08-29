@@ -119,10 +119,7 @@
     transform: rotate(4deg);
     z-index: 1;
 }
-.hero-title-line {
-    display: block;
-    white-space: nowrap;
-}
+
 @media (max-width: 700px) {
     .homepage-feature-area {
         grid-template-columns: 1fr;
@@ -130,19 +127,11 @@
         overflow: hidden;
     }
     .hero--stacked .hero__title {
-        width: 100%;
+        font-size: clamp(2rem, 11vw, 3rem);
+        line-height: 1;
         max-width: 100%;
-        margin-inline: auto;
         padding-inline: 0.5rem;
         box-sizing: border-box;
-        font-size: clamp(2rem, 10vw, 3rem);
-        line-height: 1.05;
-        text-align: center;
-        white-space: normal;
-    }
-    }
-    .hero--stacked .hero__title-word {
-        display: inline-flex;
     }
     .hero--stacked .hero__title span {
         display: inline-block;
