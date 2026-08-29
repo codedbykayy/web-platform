@@ -9,7 +9,7 @@ faqIntro.innerHTML = `
     <h1>Frequently Asked Questions</h1>
     <p>
         Find answers about website requests, commissions, my etsy listings,
-        my other platforms, and more.
+        programs I use, and more.
     </p>
 `;
 const faqPanel = createFAQ({
