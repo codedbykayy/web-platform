@@ -130,19 +130,18 @@
         overflow: hidden;
     }
     .hero--stacked .hero__title {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        column-gap: 0.12em;
-        row-gap: 0;
+        font-size: clamp(2rem, 10vw, 3rem);
+        line-height: 1;
         width: 100%;
-        max-width: 100%;
+        max-width: 92%;
         margin-inline: auto;
         padding-inline: 0.5rem;
         box-sizing: border-box;
-        font-size: clamp(2.3rem, 10vw, 3.2rem);
-        line-height: 1;
         text-align: center;
+    }
+
+    .hero--stacked .hero__title span {
+        display: inline-block;
     }
 
     .hero--stacked .hero__title-word {
