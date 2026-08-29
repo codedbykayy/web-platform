@@ -1,3 +1,5 @@
+//About Page. Edit the below sections, only what is inside "quotation marks", to update your site!
+//Do not remove commas, semicolons, or brackets or it will break.
 const about = {
     profile: {
         heading: "The Creator",

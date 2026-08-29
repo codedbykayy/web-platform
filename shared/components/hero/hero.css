@@ -1,102 +1,136 @@
-.hero{
-    display:grid;
-    padding:2rem;
-    border:1px solid;
-    border-radius:1rem;
-    grid-template-columns: 1fr 1fr;
-    gap:2rem;
+.hero {
+    padding: 2rem;
+    border: 1px solid;
+    border-radius: 1rem;
+    gap: 2rem;
     box-sizing: border-box;
     min-width: 0;
-    min-height: 220px;
-    align-items: center;
 }
 .hero__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-self: stretch;
-    padding: 2rem;
-    gap:1rem;
+    gap: 1rem;
 }
-.hero__image-area{
-    position:relative;
-    overflow:hidden;
-    min-width:0;
+.hero__image-area {
+    position: relative;
+    min-width: 0;
 }
-
-.hero__image{
-    position:absolute;
-
-    left:50%;
-    top:10%;
-
-    width:420px;
-    height:auto;
-
-    max-width:none;
-    max-height:none;
-    min-width:0;
-
-    transform:translateX(-50%);
-    object-fit:contain;
-    display:block;
-    flex:none;
-}
-.hero__title{
+.hero__title {
     margin: 0;
-    font-size: 3rem;
-    line-height: 1.1;
 }
-.hero__description{
-    margin:0;
-    max-width: 40ch;
+.hero__description {
+    margin: 0;
     line-height: 1.6;
 }
-.hero__button{
-    align-self: flex-start;
+.hero--split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 220px;
+    align-items: center;
 }
-@media (max-width:700px){
-
-    .hero{
-        grid-template-columns:1fr;
-        padding:1rem;
-        gap:1rem;
+.hero--split .hero__content {
+    align-self: stretch;
+    padding: 2rem;
+}
+.hero--split .hero__image-area {
+    overflow: hidden;
+}
+.hero--split .hero__image {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    width: 420px;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    transform: translateX(-50%);
+    object-fit: contain;
+    display: block;
+}
+.hero--stacked {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+.hero--stacked .herocontent {
+    width: 100%;
+    align-items: center;
+    padding: 0;
+}
+.hero--stacked .hero__description {
+    max-width: 50rem;
+}
+.hero--stacked .heroimage-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 0;
+    overflow: hidden;
+}
+.hero--stacked .hero__image {
+    position: static;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 80vw;
+    max-height: 65vh;
+    margin: 0 auto;
+    transform: none;
+    object-fit: contain;
+}
+@media (max-width: 700px) {
+    .hero {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .hero__content {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+}
+@media (max-width: 700px) {
+    .hero--split {
+        grid-template-columns: 1fr;
     }
 
-    .hero__content{
-        width:100%;
-        min-width:0;
-        padding:1rem;
-        box-sizing:border-box;
+    .hero--split .hero__content {
+        padding: 1rem;
     }
 
-    .hero__image-area{
-        position:relative;
-        width:100%;
-        min-width:0;
-        min-height:300px;
-        overflow:hidden;
+    .hero--split .hero__image-area {
+        width: 100%;
+        min-height: 300px;
+        overflow: hidden;
     }
 
-    .hero__image{
-        position:static;
-        display:block;
+    .hero--split .hero__image {
+        position: static;
+        display: block;
 
-        width:auto;
-        height:auto;
-        max-width:100%;
-        max-height:300px;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 300px;
 
-        margin:auto;
-        transform:none;
-        object-fit:contain;
+        margin: auto;
+        transform: none;
+        object-fit: contain;
     }
-
-    .hero__title{
-        font-size:2.25rem;
+}
+@media (max-width: 700px) {
+    .hero--stacked {
+        min-height: auto;
+        padding: 1rem;
     }
-
-    .hero__description{
-        max-width:none;
+    .hero--stacked .hero__image {
+        max-width: 95vw;
+        max-height: 55vh;
     }
 }
