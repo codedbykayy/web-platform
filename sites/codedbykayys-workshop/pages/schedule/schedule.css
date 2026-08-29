@@ -1,0 +1,57 @@
+
+#site > h1{
+    width:min(1400px, 96%);
+    margin:2rem auto 1.5rem;
+    font-size:2.5rem;
+    text-align:center;
+    --navigation-background:var(--section-background);
+}
+.schedule-page{
+    background:var(--schedule-page-background);
+    color:var(--schedule-text-color);
+    font-family:var(--schedule-font-family);
+}
+.schedule-page__title{
+    color:var(--schedule-heading-color);
+}
+.calendar{
+    background:var(--schedule-card-background);
+}
+.schedule-calendar-area{
+    position:relative;
+    width:min(1400px, 96%);
+    margin:0 auto 1.5rem;
+}
+.schedule-calendar-area .calendar{
+    width:100%;
+    margin:0;
+}
+.schedule-honeycomb{
+    position:absolute;
+    display:block;
+    height:auto;
+    pointer-events:none;
+    z-index:5;
+}
+.schedule-honeycomb--large{
+    width:320px;
+    left:-6rem;
+    bottom:-6rem;
+}
+.schedule-honeycomb--small{
+    width:160px;
+    right:-6rem;
+    top:-6rem;
+}
+@media (max-width: 700px) {
+    .schedule-honeycomb--large {
+        width: 170px;
+        left: -3rem;
+        bottom: -3rem;
+    }
+    .schedule-honeycomb--small {
+        width: 90px;
+        right: -2rem;
+        top: -2rem;
+    }
+}
