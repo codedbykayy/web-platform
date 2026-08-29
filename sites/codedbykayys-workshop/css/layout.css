@@ -119,6 +119,10 @@
     transform: rotate(4deg);
     z-index: 1;
 }
+.hero-title-line {
+    display: block;
+    white-space: nowrap;
+}
 @media (max-width: 700px) {
     .homepage-feature-area {
         grid-template-columns: 1fr;
