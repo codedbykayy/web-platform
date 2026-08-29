@@ -114,23 +114,19 @@ body{
     justify-content: center;
     gap: clamp(0.75rem, 2vw, 1.5rem);
 }
-
 .faq-page__title-row h1 {
     margin: 0.25rem 0 0.75rem;
 }
-
 .faq-page__title-asset {
     width: clamp(55px, 8vw, 110px);
     height: auto;
     flex: 0 0 auto;
     object-fit: contain;
 }
-
 @media (max-width: 700px) {
     .faq-page__title-row {
         gap: 0.5rem;
     }
-
     .faq-page__title-asset {
         width: clamp(42px, 11vw, 70px);
     }
