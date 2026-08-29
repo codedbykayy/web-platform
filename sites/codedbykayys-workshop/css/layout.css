@@ -126,7 +126,7 @@
         overflow: hidden;
     }
     .hero--stacked .hero__title {
-        font-size: clamp(2rem, 11vw, 3.2rem);
+        font-size: clamp(2rem, 11vw, 3rem);
         line-height: 1;
         max-width: 100%;
         padding-inline: 0.5rem;
