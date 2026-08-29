@@ -83,6 +83,15 @@ body {
 .hero__title-letter--3 {
     color: #87C4D5;
 }
+:root {
+    --faq-question-background: #f3a0b5;
+    --faq-question-text: #ffff;
+
+    --faq-answer-background: #9B82C0;
+    --faq-answer-text: #ffff;
+
+    --border-color: #8d6271;
+}
 @media (max-width: 700px) {
     .hero--stacked .hero__title {
         font-size: 2.5rem;

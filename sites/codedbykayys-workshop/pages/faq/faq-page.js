@@ -6,10 +6,22 @@ const faqIntro = document.createElement("header");
 faqIntro.className = "faq-page__intro";
 faqIntro.innerHTML = `
     <p class="faq-page__eyebrow">Questions from The Workshop</p>
-    <h1>Frequently Asked Questions</h1>
+    <div class="faq-page__title-row">
+        <img
+            src="../../assets/starplush.png"
+            alt=""
+            class="faq-page__title-asset faq-page__title-asset--left"
+        >
+        <h1>Frequently Asked Questions</h1>
+        <img
+            src="../../assets/moonplush.png"
+            alt=""
+            class="faq-page__title-asset faq-page__title-asset--right"
+        >
+    </div>
     <p>
-        Find answers about website requests, commissions, my etsy listings,
-        programs I use, and more.
+        Find answers about website requests, commissions, my
+        Etsy listings, my other platforms, and more.
     </p>
 `;
 const faqPanel = createFAQ({
