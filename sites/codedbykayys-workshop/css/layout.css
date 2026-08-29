@@ -129,12 +129,13 @@
         gap: 0.75rem;
         overflow: hidden;
     }
-    .hero--stacked .hero__title {
-        font-size: clamp(2rem, 11vw, 3rem);
-        line-height: 1;
+        .hero--stacked .hero__title {
+        font-size: 9vw;
+        line-height: 1.05;
+        width: 100%;
         max-width: 100%;
-        padding-inline: 0.5rem;
-        box-sizing: border-box;
+        margin-inline: auto;
+        text-align: center;
     }
     .hero--stacked .hero__title span {
         display: inline-block;
