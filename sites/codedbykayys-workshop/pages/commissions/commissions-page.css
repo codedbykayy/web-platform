@@ -332,17 +332,17 @@
 }
 
 .commissions-v1__decor--one {
-    width: 4.5rem;
-    height: 4.5rem;
-    top: -2rem;
-    left: -1.5rem;
+    width: 10rem;
+    height: 10rem;
+    top: -5rem;
+    left: -3rem;
 }
 
 .commissions-v1__decor--two {
-    width: 4rem;
-    height: 4rem;
-    right: -1.25rem;
-    bottom: -1.5rem;
+    width: 10rem;
+    height: 10rem;
+    right: -5rem;
+    bottom: -3rem;
 }
 
 .commissions-v1__section:nth-child(3n + 1) .commissions-v1__decor--one {
@@ -445,15 +445,15 @@
         box-sizing: border-box;
     }
     .commissions-v1__decor--one {
-        width: 3.25rem;
-        height: 3.25rem;
-        top: -1.4rem;
-        left: -0.8rem;
+        width: 5rem;
+        height: 5rem;
+        top: -2.5rem;
+        left: -1.8rem;
     }
     .commissions-v1__decor--two {
-        width: 3rem;
-        height: 3rem;
-        right: -0.7rem;
-        bottom: -1rem;
+        width: 5rem;
+        height: 5rem;
+        right: -2.5rem;
+        bottom: -1.8rem;
     }
 }
