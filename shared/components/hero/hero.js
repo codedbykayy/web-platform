@@ -29,19 +29,27 @@ if (data.colorfulTitle) {
     title.textContent = "";
 
     let colorIndex = 0;
+    const words = data.title.split(" ");
 
-    [...data.title].forEach((character) => {
-        const letter = document.createElement("span");
+    words.forEach((word, wordIndex) => {
+        const wordElement = document.createElement("span");
+        wordElement.className = "hero__title-word";
 
-        if (character === " ") {
-            letter.innerHTML = "&nbsp;";
-        } else {
+        [...word].forEach((character) => {
+            const letter = document.createElement("span");
+
             letter.className = `hero__title-letter hero__title-letter--${colorIndex % 4}`;
             letter.textContent = character;
-            colorIndex++;
-        }
 
-        title.appendChild(letter);
+            wordElement.appendChild(letter);
+            colorIndex++;
+        });
+
+        title.appendChild(wordElement);
+
+        if (wordIndex < words.length - 1) {
+            title.appendChild(document.createTextNode(" "));
+        }
     });
 }
     const buttonArea = hero.querySelector(".hero__buttons");
