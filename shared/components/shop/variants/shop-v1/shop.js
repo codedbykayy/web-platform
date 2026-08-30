@@ -52,37 +52,39 @@ function createShopListing(item, index) {
     `;
 }
 function createShop(data) {
+    const shopPage = document.createElement("section");
+    shopPage.className = "shop-v1";
+
     const listingsHTML = (data.items || [])
         .map((item, index) => createShopListing(item, index))
         .join("");
-    return `
-        <section class="shop-v1">
-            ${
-                data.intro
-                    ? `
-                        <header class="shop-v1__intro">
-                            ${
-                                data.intro.eyebrow
-                                    ? `<p class="shop-v1__eyebrow">${data.intro.eyebrow}</p>`
-                                    : ""
-                            }
-                            ${
-                                data.intro.title
-                                    ? `<h1>${data.intro.title}</h1>`
-                                    : ""
-                            }
-                            ${
-                                data.intro.description
-                                    ? `<p class="shop-v1__description">${data.intro.description}</p>`
-                                    : ""
-                            }
-                        </header>
-                    `
-                    : ""
-            }
-            <div class="shop-v1__grid">
-                ${listingsHTML}
-            </div>
-        </section>
+    shopPage.innerHTML = `
+        ${
+            data.intro
+                ? `
+                    <header class="shop-v1__intro">
+                        ${
+                            data.intro.eyebrow
+                                ? `<p class="shop-v1__eyebrow">${data.intro.eyebrow}</p>`
+                                : ""
+                        }
+                        ${
+                            data.intro.title
+                                ? `<h1>${data.intro.title}</h1>`
+                                : ""
+                        }
+                        ${
+                            data.intro.description
+                                ? `<p class="shop-v1__description">${data.intro.description}</p>`
+                                : ""
+                        }
+                    </header>
+                `
+                : ""
+        }
+        <div class="shop-v1__grid">
+            ${listingsHTML}
+        </div>
     `;
+    return shopPage;
 }

@@ -1,0 +1,157 @@
+.shop-v1 {
+    background: var(--shop-v1-page-background);
+    color: var(--shop-v1-info-text);
+}
+/* INTRO */
+.shop-v1__intro {
+    position: relative;
+    width: min(1400px, 96%);
+    margin: 2rem auto 1.5rem;
+    padding: 2rem 9rem;
+    box-sizing: border-box;
+    text-align: center;
+    background: var(--shop-v1-intro-background);
+    color: var(--shop-v1-intro-text);
+    border: 2px solid var(--shop-v1-frame-border);
+    border-radius: 1.75rem;
+}
+.shop-v1__intro::before,
+.shop-v1__intro::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 5.5rem;
+    height: 5.5rem;
+    transform: translateY(-50%);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+.shop-v1__intro::before {
+    left: 2.5rem;
+    background-image: url("../../assets/starplush.png");
+}
+.shop-v1__intro::after {
+    right: 2.5rem;
+    background-image: url("../../assets/moonplush.png");
+}
+.shop-v1__listing {
+    background: var(--shop-v1-frame-background);
+    border: 2px solid var(--shop-v1-frame-border);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 0.5rem 1rem rgba(101, 67, 79, 0.15);
+}
+.shop-v1__listing::before {
+    content: "";
+    position: absolute;
+    inset: 0.55rem;
+    border: 2px dashed var(--shop-v1-stitch-color);
+    border-radius: 1.1rem;
+    pointer-events: none;
+    z-index: 2;
+}
+.shop-v1__media {
+    position: relative;
+    z-index: 1;
+    background: var(--shop-v1-frame-inner-background);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.shop-v1__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.shop-v1__info {
+    position: relative;
+    z-index: 3;
+    padding: 1rem 0.5rem 0.25rem;
+    text-align: center;
+    color: var(--shop-v1-info-text);
+}
+.shop-v1__info h3,
+.shop-v1__info p {
+    margin: 0;
+}
+.shop-v1__info p {
+    margin-top: 0.35rem;
+}
+.shop-v1__price {
+    margin-top: 0.55rem;
+}
+.shop-v1__decor {
+    position: absolute;
+    z-index: 4;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.shop-v1__decor--one {
+    width: 4.5rem;
+    height: 4.5rem;
+    top: -2rem;
+    left: -1.5rem;
+}
+.shop-v1__decor--two {
+    width: 4rem;
+    height: 4rem;
+    right: -1.25rem;
+    bottom: -1.5rem;
+}
+.shop-v1__listing:nth-child(3n + 1) .shop-v1__decor--one {
+    background-image: url("../../assets/pinkspool.png");
+}
+.shop-v1__listing:nth-child(3n + 2) .shop-v1__decor--one {
+    background-image: url("../../assets/yellowspool.png");
+}
+.shop-v1__listing:nth-child(3n + 3) .shop-v1__decor--one {
+    background-image: url("../../assets/bluespool.png");
+}
+.shop-v1__listing:nth-child(odd) .shop-v1__decor--two {
+    background-image: url("../../assets/yellowbutton.png");
+}
+.shop-v1__listing:nth-child(even) .shop-v1__decor--two {
+    background-image: url("../../assets/pinkbutton.png");
+}
+@media (max-width: 700px) {
+    .shop-v1__intro {
+        width: calc(100% - 2rem);
+        margin: 1rem auto;
+        padding: 2rem 4.5rem;
+    }
+    .shop-v1__intro::before,
+    .shop-v1__intro::after {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .shop-v1__intro::before {
+        left: 0.75rem;
+    }
+    .shop-v1__intro::after {
+        right: 0.75rem;
+    }
+    .shop-v1__listing {
+        padding: 0.8rem;
+    }
+    .shop-v1__decor--one {
+        width: 3.25rem;
+        height: 3.25rem;
+        top: -1.4rem;
+        left: -0.8rem;
+    }
+    .shop-v1__decor--two {
+        width: 3rem;
+        height: 3rem;
+        right: -0.7rem;
+        bottom: -1rem;
+    }
+    .shop-v1__info {
+        padding: 0.65rem 0.25rem 0.2rem;
+    }
+}
