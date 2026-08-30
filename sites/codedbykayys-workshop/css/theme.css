@@ -92,6 +92,23 @@ body {
 
     --border-color: #8d6271;
 }
+:root {
+    --gallery-v2-page-background: #f6d5c2;
+
+    --gallery-v2-intro-background: #fff7eb;
+    --gallery-v2-intro-text: #65434f;
+
+    --gallery-v2-section-background: #f6d5c2;
+    --gallery-v2-section-heading-background: #f7a0b8;
+    --gallery-v2-section-heading-text: #65434f;
+
+    --gallery-v2-frame-background: #f3a0b5;
+    --gallery-v2-frame-inner-background: #fff7eb;
+    --gallery-v2-frame-border: #806271;
+    --gallery-v2-stitch-color: #806271;
+
+    --gallery-v2-caption-text: #65434f;
+}
 @media (max-width: 700px) {
     .hero--stacked .hero__title {
         font-size: 2.5rem;

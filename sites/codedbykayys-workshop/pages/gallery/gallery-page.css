@@ -1,0 +1,211 @@
+.gallery-v2 {
+    background: var(--gallery-v2-page-background);
+    color: var(--gallery-v2-caption-text);
+}
+
+/* TITLE */
+
+.gallery-v2__intro {
+    position: relative;
+    width: min(1400px, 96%);
+    margin: 2rem auto 1.5rem;
+    padding: 2rem 9rem;
+    box-sizing: border-box;
+    text-align: center;
+
+    background: var(--gallery-v2-intro-background);
+    color: var(--gallery-v2-intro-text);
+
+    border: 2px solid var(--gallery-v2-frame-border);
+    border-radius: 1.75rem;
+}
+
+.gallery-v2__intro::before,
+.gallery-v2__intro::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 5.5rem;
+    height: 5.5rem;
+    transform: translateY(-50%);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.gallery-v2__intro::before {
+    left: 2.5rem;
+    background-image: url("../../assets/starplush.png");
+}
+
+.gallery-v2__intro::after {
+    right: 2.5rem;
+    background-image: url("../../assets/moonplush.png");
+}
+
+/* SECTION HEADINGS */
+
+.gallery-v2__section {
+    background: var(--gallery-v2-section-background);
+}
+
+.gallery-v2__section-heading {
+    background: var(--gallery-v2-section-heading-background);
+    color: var(--gallery-v2-section-heading-text);
+    border-color: var(--gallery-v2-frame-border);
+}
+
+/* ALL MEDIA FRAMES */
+
+.gallery-v2__frame {
+    background: var(--gallery-v2-frame-background);
+    border: 2px solid var(--gallery-v2-frame-border);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 0.5rem 1rem rgba(101, 67, 79, 0.15);
+}
+
+.gallery-v2__frame::before {
+    content: "";
+    position: absolute;
+    inset: 0.55rem;
+    border: 2px dashed var(--gallery-v2-stitch-color);
+    border-radius: 1.1rem;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* IMAGE + VIDEO WINDOW */
+
+.gallery-v2__media {
+    position: relative;
+    z-index: 1;
+    background: var(--gallery-v2-frame-inner-background);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.gallery-v2__media img,
+.gallery-v2__media video {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-v2__media img {
+    object-fit: contain;
+}
+
+.gallery-v2__media video {
+    object-fit: contain;
+    background: var(--gallery-v2-frame-inner-background);
+}
+
+/* CAPTIONS */
+
+.gallery-v2__caption {
+    position: relative;
+    z-index: 3;
+    padding: 1rem 0.5rem 0.25rem;
+    text-align: center;
+    color: var(--gallery-v2-caption-text);
+}
+
+.gallery-v2__caption h3,
+.gallery-v2__caption p {
+    margin: 0;
+}
+
+.gallery-v2__caption p {
+    margin-top: 0.35rem;
+}
+
+/* FRAME DECOR SLOTS */
+
+.gallery-v2__decor {
+    position: absolute;
+    z-index: 4;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.gallery-v2__decor--one {
+    width: 4.5rem;
+    height: 4.5rem;
+    top: -2rem;
+    left: -1.5rem;
+}
+
+.gallery-v2__decor--two {
+    width: 4rem;
+    height: 4rem;
+    right: -1.25rem;
+    bottom: -1.5rem;
+}
+
+.gallery-v2__frame:nth-child(3n + 1) .gallery-v2__decor--one {
+    background-image: url("../../assets/pinkspool.png");
+}
+
+.gallery-v2__frame:nth-child(3n + 2) .gallery-v2__decor--one {
+    background-image: url("../../assets/yellowspool.png");
+}
+
+.gallery-v2__frame:nth-child(3n + 3) .gallery-v2__decor--one {
+    background-image: url("../../assets/bluespool.png");
+}
+
+.gallery-v2__frame:nth-child(odd) .gallery-v2__decor--two {
+    background-image: url("../../assets/yellowbutton.png");
+}
+
+.gallery-v2__frame:nth-child(even) .gallery-v2__decor--two {
+    background-image: url("../../assets/pinkbutton.png");
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .gallery-v2__intro {
+        width: calc(100% - 2rem);
+        margin: 1rem auto;
+        padding: 2rem 4.5rem;
+    }
+
+    .gallery-v2__intro::before,
+    .gallery-v2__intro::after {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .gallery-v2__intro::before {
+        left: 0.75rem;
+    }
+
+    .gallery-v2__intro::after {
+        right: 0.75rem;
+    }
+
+    .gallery-v2__frame {
+        padding: 0.8rem;
+    }
+
+    .gallery-v2__decor--one {
+        width: 3.25rem;
+        height: 3.25rem;
+        top: -1.4rem;
+        left: -0.8rem;
+    }
+
+    .gallery-v2__decor--two {
+        width: 3rem;
+        height: 3rem;
+        right: -0.7rem;
+        bottom: -1rem;
+    }
+}

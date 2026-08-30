@@ -1,0 +1,183 @@
+.gallery-v2 {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--gallery-page-background, var(--page-background));
+    color: var(--gallery-text-color, var(--text-color));
+}
+.gallery-v2__intro {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem;
+    text-align: center;
+    background: var(--gallery-intro-background, var(--section-background));
+    color: var(--gallery-intro-text, var(--text-color));
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+}
+.gallery-v2__eyebrow {
+    margin: 0 0 0.4rem;
+    font-weight: 700;
+}
+.gallery-v2__intro h1 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+.gallery-v2__description {
+    width: min(750px, 100%);
+    margin: 0 auto;
+    line-height: 1.6;
+}
+.gallery-v2__section {
+    width: 100%;
+    box-sizing: border-box;
+}
+.gallery-v2__section-heading {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem 1.25rem;
+    text-align: center;
+    background: var(--gallery-header-background, var(--section-background));
+    color: var(--gallery-header-text, var(--text-color));
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+}
+.gallery-v2__section-heading h2 {
+    margin: 0;
+}
+.gallery-v2__images {
+    width: min(1500px, 100%);
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+.gallery-v2__videos {
+    width: min(1500px, 100%);
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+.gallery-v2__frame {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 1rem;
+    background: var(--gallery-frame-background, var(--section-background));
+    color: var(--gallery-frame-text, var(--text-color));
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+}
+.gallery-v2__images .gallery-v2__frame:nth-child(3n + 1) {
+    transform: rotate(-1.5deg);
+}
+.gallery-v2__images .gallery-v2__frame:nth-child(3n + 2) {
+    transform: translateY(1.25rem) rotate(1deg);
+}
+.gallery-v2__images .gallery-v2__frame:nth-child(3n + 3) {
+    transform: rotate(-0.5deg);
+}
+.gallery-v2__videos .gallery-v2__frame:nth-child(3n + 1) {
+    transform: rotate(0.5deg);
+}
+.gallery-v2__videos .gallery-v2__frame:nth-child(3n + 2) {
+    transform: translateY(1rem) rotate(-0.75deg);
+}
+.gallery-v2__videos .gallery-v2__frame:nth-child(3n + 3) {
+    transform: rotate(0.75deg);
+}
+.gallery-v2__media {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    background: var(--gallery-media-background, var(--section-background));
+    border-radius: 0.75rem;
+}
+.gallery-v2__media--image {
+    aspect-ratio: 4 / 5;
+}
+.gallery-v2__media--video {
+    aspect-ratio: 16 / 9;
+}
+.gallery-v2__media img,
+.gallery-v2__media video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.gallery-v2__caption {
+    padding-top: 1rem;
+    text-align: center;
+}
+.gallery-v2__caption h3,
+.gallery-v2__caption p {
+    margin: 0;
+}
+.gallery-v2__caption p {
+    margin-top: 0.35rem;
+}
+.gallery-v2__decor {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+}
+.gallery-v2__decor--one {
+    left: -1rem;
+    top: -1rem;
+}
+.gallery-v2__decor--two {
+    right: -1rem;
+    bottom: -1rem;
+}
+@media (max-width: 700px) {
+    .gallery-v2 {
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+    .gallery-v2__intro {
+        padding: 1.5rem 1rem;
+    }
+    .gallery-v2__images {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 2rem 0.5rem 3rem;
+        gap: 1rem;
+    }
+    .gallery-v2__videos {
+        grid-template-columns: 1fr;
+        padding: 2rem 0.5rem;
+        gap: 1.5rem;
+    }
+    .gallery-v2__frame {
+        min-width: 0;
+        padding: 0.65rem;
+    }
+    .gallery-v2__images .gallery-v2__frame:nth-child(odd) {
+        transform: rotate(-1deg);
+    }
+    .gallery-v2__images .gallery-v2__frame:nth-child(even) {
+        transform: translateY(1rem) rotate(1deg);
+    }
+    .gallery-v2__videos .gallery-v2__frame:nth-child(n) {
+        transform: none;
+    }
+    .gallery-v2__caption {
+        padding-top: 0.65rem;
+    }
+}

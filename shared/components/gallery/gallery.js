@@ -7,19 +7,16 @@ function createGalleryArtwork(image, alt, placeholder) {
             >
         `;
     }
-
     return `
         <span class="gallery-placeholder">
             ${placeholder}
         </span>
     `;
 }
-
 function createClipMedia(clip, featured = false) {
     const mediaClass = featured
         ? "gallery-featured__media"
         : "gallery-film__media";
-
     if (clip.sourceType === "external" && clip.externalLink) {
         return `
             <a
@@ -43,14 +40,12 @@ function createClipMedia(clip, featured = false) {
                             </span>
                         `
                 }
-
                 <span class="gallery-play-badge">
                     Watch clip
                 </span>
             </a>
         `;
     }
-
     if (clip.video) {
         return `
             <div class="${mediaClass}">
@@ -61,13 +56,11 @@ function createClipMedia(clip, featured = false) {
                     ${clip.poster ? `poster="${clip.poster}"` : ""}
                 >
                     <source src="${clip.video}">
-
                     Your browser does not support this video.
                 </video>
             </div>
         `;
     }
-
     return `
         <div class="${mediaClass}">
             <span class="gallery-placeholder">
@@ -76,37 +69,30 @@ function createClipMedia(clip, featured = false) {
         </div>
     `;
 }
-
 function createGalleryPage(data) {
     const galleryPage = document.createElement("section");
     galleryPage.className = "gallery-page";
-
     const clipsHTML = data.clips.items
         .map((clip) => {
             return `
                 <article class="gallery-film__frame">
                     <span class="gallery-film__hole gallery-film__hole--top">
                     </span>
-
                     ${createClipMedia(clip)}
-
                     <div class="gallery-film__caption">
                         <h3>${clip.name}</h3>
                     </div>
-
                     <span class="gallery-film__hole gallery-film__hole--bottom">
                     </span>
                 </article>
             `;
         })
         .join("");
-
     const fanArtHTML = data.fanArt.items
         .map((art, index) => {
             return `
                 <article class="gallery-photo gallery-photo--${index + 1}">
                     <span class="gallery-photo__tape"></span>
-
                     <div class="gallery-photo__image">
                         ${createGalleryArtwork(
                             art.image,
@@ -114,7 +100,6 @@ function createGalleryPage(data) {
                             art.placeholder
                         )}
                     </div>
-
                     <div class="gallery-photo__caption">
                         <h3>${art.title}</h3>
                         <p>${art.artist}</p>
@@ -123,35 +108,27 @@ function createGalleryPage(data) {
             `;
         })
         .join("");
-
     galleryPage.innerHTML = `
         <header class="gallery-page__intro">
             <p class="gallery-page__eyebrow">
                 ${data.intro.eyebrow}
             </p>
-
             <h1>${data.intro.title}</h1>
-
             <p class="gallery-page__description">
                 ${data.intro.description}
             </p>
         </header>
-
         <section class="gallery-featured">
             <header class="gallery-section-heading">
                 <h2>${data.featuredClip.title}</h2>
             </header>
-
             <div class="gallery-featured__layout">
                 ${createClipMedia(data.featuredClip, true)}
-
                 <div class="gallery-featured__content">
                     <h3>${data.featuredClip.name}</h3>
-
                     <p>
                         ${data.featuredClip.description}
                     </p>
-
                     ${
                         data.featuredClip.sourceType === "external" &&
                         data.featuredClip.externalLink
@@ -170,29 +147,24 @@ function createGalleryPage(data) {
                 </div>
             </div>
         </section>
-
         <section class="gallery-clips">
             <header class="gallery-section-heading">
                 <h2>${data.clips.title}</h2>
             </header>
-
             <div class="gallery-film">
                 ${clipsHTML}
             </div>
         </section>
-
         <section class="gallery-fan-art">
             <header class="gallery-section-heading">
                 <h2>${data.fanArt.title}</h2>
 
                 <p>${data.fanArt.description}</p>
             </header>
-
             <div class="gallery-fan-art__grid">
                 ${fanArtHTML}
             </div>
         </section>
     `;
-
     return galleryPage;
 }
