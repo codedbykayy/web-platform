@@ -15,7 +15,6 @@ function createCommunity(data){
                     `
                     : ""
             }
-
             <p class="community__description">
                 ${data.description}
             </p>

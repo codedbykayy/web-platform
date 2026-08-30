@@ -1,0 +1,459 @@
+.commissions-v1 {
+    background: var(--gallery-v2-page-background);
+    color: var(--gallery-v2-caption-text);
+}
+
+/* MAIN PAGE HEADER — MATCHES GALLERY */
+
+.commissions-v1__intro {
+    position: relative;
+    width: min(1400px, 96%);
+    margin: 2rem auto 1.5rem;
+    padding: 2rem 9rem;
+    box-sizing: border-box;
+    text-align: center;
+
+    background: var(--gallery-v2-intro-background);
+    color: var(--gallery-v2-intro-text);
+
+    border: 2px solid var(--gallery-v2-frame-border);
+    border-radius: 1.75rem;
+}
+
+.commissions-v1__intro::before,
+.commissions-v1__intro::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 5.5rem;
+    height: 5.5rem;
+    transform: translateY(-50%);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.commissions-v1__intro::before {
+    left: 2.5rem;
+    background-image: url("../../assets/starplush.png");
+}
+
+.commissions-v1__intro::after {
+    right: 2.5rem;
+    background-image: url("../../assets/moonplush.png");
+}
+
+/* COMMISSION SECTION LIST */
+
+.commissions-v1__sections {
+    gap: 3.5rem;
+}
+
+/* ONE FULL COMMISSION SECTION */
+
+.commissions-v1__section {
+    position: relative;
+
+    width: min(1450px, 96%);
+    margin: 0 auto;
+    padding: 6.5rem 2rem 2.25rem;
+
+    box-sizing: border-box;
+
+    background: var(--gallery-v2-frame-background);
+
+    border: 2px solid var(--gallery-v2-frame-border);
+    border-radius: 1.75rem;
+
+    box-shadow: 0 0.5rem 1rem rgba(101, 67, 79, 0.15);
+}
+
+.commissions-v1__section::before {
+    content: "";
+    position: absolute;
+    inset: 0.55rem;
+
+    border: 2px dashed var(--gallery-v2-stitch-color);
+    border-radius: 1.35rem;
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* PINK MAIN TITLE TAB */
+
+.commissions-v1__section-heading {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+
+    width: min(700px, calc(100% - 4rem));
+    padding: 0.9rem 1.5rem;
+
+    transform: translateX(-50%);
+    box-sizing: border-box;
+
+    background: var(--gallery-v2-intro-background);
+    color: var(--gallery-v2-section-heading-text);
+
+    border: 2px solid var(--gallery-v2-frame-border);
+    border-radius: 1rem;
+
+    text-align: center;
+    z-index: 4;
+}
+
+.commissions-v1__section-heading h2 {
+    margin: 0;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+}
+
+/* TWO-COLUMN CONTENT */
+
+.commissions-v1__content {
+    position: relative;
+    z-index: 2;
+
+    width: min(1200px, 100%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 2rem;
+    align-items: stretch;
+}
+
+/* LEFT + RIGHT COLORED PANELS */
+
+.commissions-v1__pricing,
+.commissions-v1__examples {
+    position: relative;
+
+    min-width: 0;
+    padding: 4.75rem 1.5rem 1.75rem;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 2px solid var(--gallery-v2-frame-border);
+    border-radius: 1.5rem;
+
+    box-shadow: 0 0.35rem 0.7rem rgba(101, 67, 79, 0.12);
+}
+
+/* LEFT = PASTEL PURPLE */
+
+.commissions-v1__pricing {
+    background: #d9cbed;
+}
+
+/* RIGHT = PASTEL YELLOW */
+
+.commissions-v1__examples {
+    background: #f7e6a9;
+}
+
+/* STITCHING INSIDE BOTH HALVES */
+
+.commissions-v1__pricing::before,
+.commissions-v1__examples::before {
+    content: "";
+    position: absolute;
+    inset: 0.5rem;
+
+    border: 2px dashed var(--gallery-v2-stitch-color);
+    border-radius: 1.15rem;
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* SUBTITLE TABS */
+
+.commissions-v1__subtitle {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+
+    width: min(78%, 360px);
+    margin: 0;
+    padding: 0.65rem 1rem;
+
+    transform: translateX(-50%);
+    box-sizing: border-box;
+
+    text-align: center;
+    color: var(--gallery-v2-caption-text);
+
+    border: 2px solid var(--gallery-v2-frame-border);
+    border-radius: 0.9rem;
+
+    z-index: 3;
+}
+
+.commissions-v1__pricing .commissions-v1__subtitle {
+    background: #eee6f8;
+}
+
+.commissions-v1__examples .commissions-v1__subtitle {
+    background: #fff4c9;
+}
+
+/* PRICING IMAGE */
+
+.commissions-v1__media {
+    position: relative;
+    z-index: 2;
+
+    width: min(340px, 100%);
+
+    background: var(--gallery-v2-frame-inner-background);
+
+    border: 2px solid var(--gallery-v2-frame-border);
+    border-radius: 1rem;
+
+    overflow: hidden;
+}
+
+.commissions-v1__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* EXAMPLE CAROUSEL */
+
+.commissions-v1__carousel {
+    position: relative;
+    z-index: 2;
+
+    width: min(460px, 100%);
+
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr) 3rem;
+
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.commissions-v1__example-window {
+    width: min(340px, 100%);
+
+    background: var(--gallery-v2-frame-inner-background);
+
+    border: 2px solid var(--gallery-v2-frame-border);
+    border-radius: 1rem;
+
+    overflow: hidden;
+}
+
+.commissions-v1__example img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* DESCRIPTION */
+
+.commissions-v1__pricing-description {
+    position: relative;
+    z-index: 2;
+
+    width: min(420px, 100%);
+    margin: 1.25rem auto 0;
+
+    color: var(--gallery-v2-caption-text);
+
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ARROWS */
+
+.commissions-v1__arrow {
+    position: relative;
+    z-index: 3;
+
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--gallery-v2-frame-inner-background);
+    color: var(--gallery-v2-caption-text);
+
+    border: 2px solid var(--gallery-v2-frame-border);
+    border-radius: 50%;
+
+    font: inherit;
+    font-size: 1.5rem;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.commissions-v1__arrow:hover {
+    transform: translateY(-2px);
+}
+
+/* REQUEST BUTTON */
+
+.commissions-v1__request {
+    position: relative;
+    z-index: 4;
+
+    display: block;
+    min-width: 240px;
+    margin: 2rem auto 0;
+}
+
+/* DECOR */
+
+.commissions-v1__decor {
+    position: absolute;
+    z-index: 5;
+
+    pointer-events: none;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.commissions-v1__decor--one {
+    width: 4.5rem;
+    height: 4.5rem;
+    top: -2rem;
+    left: -1.5rem;
+}
+
+.commissions-v1__decor--two {
+    width: 4rem;
+    height: 4rem;
+    right: -1.25rem;
+    bottom: -1.5rem;
+}
+
+.commissions-v1__section:nth-child(3n + 1) .commissions-v1__decor--one {
+    background-image: url("../../assets/pinkspool.png");
+}
+
+.commissions-v1__section:nth-child(3n + 2) .commissions-v1__decor--one {
+    background-image: url("../../assets/yellowspool.png");
+}
+
+.commissions-v1__section:nth-child(3n + 3) .commissions-v1__decor--one {
+    background-image: url("../../assets/bluespool.png");
+}
+
+.commissions-v1__section:nth-child(odd) .commissions-v1__decor--two {
+    background-image: url("../../assets/yellowbutton.png");
+}
+
+.commissions-v1__section:nth-child(even) .commissions-v1__decor--two {
+    background-image: url("../../assets/pinkbutton.png");
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .commissions-v1__intro {
+        width: calc(100% - 2rem);
+        margin: 1rem auto;
+        padding: 2rem 4.5rem;
+    }
+
+    .commissions-v1__intro::before,
+    .commissions-v1__intro::after {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .commissions-v1__intro::before {
+        left: 0.75rem;
+    }
+
+    .commissions-v1__intro::after {
+        right: 0.75rem;
+    }
+
+    .commissions-v1__section {
+        width: calc(100% - 2rem);
+        padding: 5.75rem 0.75rem 1.25rem;
+    }
+
+    .commissions-v1__section-heading {
+        top: 0.85rem;
+        width: calc(100% - 2.5rem);
+        padding: 0.75rem 1rem;
+    }
+
+    .commissions-v1__section-heading h2 {
+        font-size: clamp(1.6rem, 7vw, 2.1rem);
+    }
+
+    .commissions-v1__content {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .commissions-v1__pricing,
+    .commissions-v1__examples {
+        width: 100%;
+        padding: 4.25rem 0.75rem 1.25rem;
+    }
+
+    .commissions-v1__subtitle {
+        top: 0.85rem;
+        width: calc(100% - 2rem);
+        padding: 0.6rem 0.75rem;
+    }
+    .commissions-v1__media,
+    .commissions-v1__example-window {
+        width: min(300px, 100%);
+    }
+    .commissions-v1__pricing-description {
+        width: min(340px, 100%);
+        margin-top: 1rem;
+    }
+    .commissions-v1__carousel {
+        width: 100%;
+        grid-template-columns: 2.4rem minmax(0, 1fr) 2.4rem;
+        gap: 0.4rem;
+    }
+    .commissions-v1__arrow {
+        width: 2.4rem;
+        height: 2.4rem;
+        font-size: 1.25rem;
+    }
+    .commissions-v1__request {
+        width: min(100%, 20rem);
+        min-width: 0;
+        margin-top: 1.5rem;
+        box-sizing: border-box;
+    }
+    .commissions-v1__decor--one {
+        width: 3.25rem;
+        height: 3.25rem;
+        top: -1.4rem;
+        left: -0.8rem;
+    }
+    .commissions-v1__decor--two {
+        width: 3rem;
+        height: 3rem;
+        right: -0.7rem;
+        bottom: -1rem;
+    }
+}

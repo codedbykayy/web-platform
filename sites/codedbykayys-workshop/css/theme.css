@@ -112,6 +112,25 @@ body {
     --shop-v1-frame-border: #806271;
     --shop-v1-stitch-color: #806271;
     --shop-v1-info-text: #65434f;
+    /* COMMISSIONS V1 */
+
+    --commissions-v1-page-background: var(--gallery-v2-page-background);
+    --commissions-v1-intro-background: var(--gallery-v2-intro-background);
+    --commissions-v1-intro-text: var(--gallery-v2-intro-text);
+    --commissions-v1-section-background: var(--gallery-v2-frame-background);
+    --commissions-v1-frame-inner-background: var(--gallery-v2-frame-inner-background);
+    --commissions-v1-frame-border: var(--gallery-v2-frame-border);
+    --commissions-v1-stitch-color: var(--gallery-v2-stitch-color);
+    --commissions-v1-title-background: var(--gallery-v2-section-heading-background);
+    --commissions-v1-title-text: var(--gallery-v2-section-heading-text);
+    --commissions-v1-pricing-background: #d9cbed;
+    --commissions-v1-pricing-title-background: #eee6f8;
+    --commissions-v1-examples-background: #f7e6a9;
+    --commissions-v1-examples-title-background: #fff4c9;
+    --commissions-v1-subtitle-text: var(--gallery-v2-caption-text);
+    --commissions-v1-text: var(--gallery-v2-caption-text);
+    --commissions-v1-arrow-background: var(--gallery-v2-frame-inner-background);
+    --commissions-v1-arrow-text: var(--gallery-v2-caption-text);
 }
 @media (max-width: 700px) {
     .hero--stacked .hero__title {
