@@ -130,25 +130,20 @@
         overflow: hidden;
     }
     .hero--stacked .hero__title {
-        font-size: clamp(2rem, 10vw, 3rem);
-        line-height: 1;
         width: 100%;
-        max-width: 96%;
+        max-width: 100%;
         margin-inline: auto;
-        padding-inline: 0.5rem;
+        padding-inline: 0.75rem;
         box-sizing: border-box;
+        font-size: clamp(2rem, 10vw, 3rem);
+        line-height: 1.05;
         text-align: center;
     }
-
-    .hero--stacked .hero__title span {
-        display: inline-block;
-    }
-
     .hero--stacked .hero__title-word {
-        display: inline-flex;
+        display: inline-block;
         white-space: nowrap;
     }
-    .hero--stacked .hero__title span {
+    .hero--stacked .hero__title-letter {
         display: inline-block;
     }
     .homepage-feature-side {
