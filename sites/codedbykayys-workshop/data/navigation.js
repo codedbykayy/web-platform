@@ -12,7 +12,7 @@ const navigation = {
         {label: "FAQ", link:"pages/faq/index.html"},
         {label: "Shop", link:"pages/shop/index.html"},
         {label: "Gallery", link:"pages/gallery/index.html"},
-        {label: "Request Form", link:""}
+        {label: "Request a Website", link:""}
     ],
     button:{
         label:"Shop my Etsy",
