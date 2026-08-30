@@ -154,4 +154,9 @@
     .shop-v1__info {
         padding: 0.65rem 0.25rem 0.2rem;
     }
+    .shop-v1__button {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
 }
