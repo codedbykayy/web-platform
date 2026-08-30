@@ -1,7 +1,7 @@
 const page= document.querySelector("#site");
 const navigationElement = createNavigation(navigation);
 const heading = document.createElement("h1");
-heading.textContent = "Stream Schedule";
+heading.textContent = calendar.title;
 const schedulePage = document.createElement("section");
 schedulePage.className = "schedule-page";
 const calendarPanel = createCalendar(calendar.embedLink);
