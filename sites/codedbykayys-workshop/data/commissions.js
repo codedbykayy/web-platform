@@ -30,7 +30,8 @@ const commissions = {
                 },
             ],
 
-            buttonText: "Request This Style!"
+            buttonText: "Request This Style!",
+            requestName: "Roblox Commission Request"
         },
         {
             title: "Coming Soon!",
@@ -57,7 +58,8 @@ const commissions = {
                 },
             ],
 
-            buttonText: "Request This Style!"
+            buttonText: "Request This Style!",
+            requestName: "Roblox Commission Request"
         },
     ]
 };
