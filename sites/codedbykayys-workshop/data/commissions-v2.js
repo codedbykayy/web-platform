@@ -12,7 +12,7 @@ const commissionsV2 = {
 
     intro: {
         eyebrow:
-            "Build Something in the Workshop!",
+            "Build Something in the Workshop! 1 Time Payment (after review!!), No Recurring Fees/Subscriptions.",
 
         title:
             "Request a Website",
@@ -284,7 +284,7 @@ const commissionsV2 = {
                 "Choose Your Homepage",
 
             description:
-                "Choose the homepage layout you like best. The layout changes how your homepage is arranged, but it does not decide which homepage sections you can use.",
+                "Choose the homepage layout you like best. The layout changes how your homepage is arranged, but it does not decide which homepage sections you can use. That is decided in the next step.",
 
             selectionNote:
                 "You can choose any 4 homepage sections with either layout.",
@@ -328,7 +328,7 @@ const commissionsV2 = {
                         0,
 
                     priceLabel:
-                        "Homepage Package: $150. Hero + 4 sections of your choice (choose sections below).",
+                        "Homepage Package: $150. Hero + 4 sections of your choice.",
 
                     buttonText:
                         "Choose Split"
