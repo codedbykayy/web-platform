@@ -1,0 +1,1162 @@
+.commissions-v2 {
+    background:
+        var(--gallery-v2-page-background);
+
+    color:
+        var(--gallery-v2-caption-text);
+}
+
+
+/* =========================================
+   MAIN INTRO
+========================================= */
+
+.commissions-v2__intro {
+    position: relative;
+
+    width:
+        min(
+            1400px,
+            96%
+        );
+
+    margin:
+        2rem auto 1.5rem;
+
+    padding:
+        2rem 9rem;
+
+    box-sizing:
+        border-box;
+
+    text-align:
+        center;
+
+    background:
+        var(--gallery-v2-intro-background);
+
+    color:
+        var(--gallery-v2-intro-text);
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    border-radius:
+        1.75rem;
+
+    box-shadow:
+        0 0.4rem 0.9rem
+        rgba(101, 67, 79, 0.12);
+}
+
+
+/* PLUSH DECOR */
+
+.commissions-v2__intro::before,
+.commissions-v2__intro::after {
+    content: "";
+
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    width:
+        5.5rem;
+
+    height:
+        5.5rem;
+
+    transform:
+        translateY(-50%);
+
+    background-size:
+        contain;
+
+    background-position:
+        center;
+
+    background-repeat:
+        no-repeat;
+
+    pointer-events:
+        none;
+}
+
+
+.commissions-v2__intro::before {
+    left:
+        2.5rem;
+
+    background-image:
+        url("../../assets/starplush.png");
+}
+
+
+.commissions-v2__intro::after {
+    right:
+        2.5rem;
+
+    background-image:
+        url("../../assets/moonplush.png");
+}
+
+
+/* =========================================
+   BLOCK LIST
+========================================= */
+
+.commissions-v2__blocks {
+    gap:
+        3.5rem;
+}
+
+
+/* =========================================
+   MAIN BUILDER BLOCK
+
+   IMPORTANT:
+   Headings live in normal document flow.
+   The block grows naturally with them.
+========================================= */
+
+.commissions-v2__block {
+    position:
+        relative;
+
+    width:
+        min(
+            1450px,
+            96%
+        );
+
+    margin:
+        0 auto;
+
+    padding:
+        2rem;
+
+    box-sizing:
+        border-box;
+
+    background:
+        var(--gallery-v2-frame-background);
+
+    color:
+        var(--gallery-v2-caption-text);
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    border-radius:
+        1.75rem;
+
+    box-shadow:
+        0 0.5rem 1rem
+        rgba(101, 67, 79, 0.15);
+}
+
+
+/* INNER STITCH */
+
+.commissions-v2__block::before {
+    content: "";
+
+    position:
+        absolute;
+
+    inset:
+        0.55rem;
+
+    border:
+        2px dashed
+        var(--gallery-v2-stitch-color);
+
+    border-radius:
+        1.35rem;
+
+    pointer-events:
+        none;
+
+    z-index:
+        1;
+}
+
+
+/* KEEP REAL CONTENT ABOVE STITCH */
+
+.commissions-v2__block-heading,
+.commissions-v2__carousel,
+.commissions-v2__selection-counter,
+.commissions-v2__selection-carousel,
+.commissions-v2__notice-body,
+.commissions-v2__summary-content,
+.commissions-v2__estimate-total,
+.commissions-v2__estimate-short-disclaimer,
+.commissions-v2__estimate-disclaimer,
+.commissions-v2__request-launch {
+    position:
+        relative;
+
+    z-index:
+        2;
+}
+
+
+/* =========================================
+   BLOCK TITLE TAB
+
+   NOT ABSOLUTE.
+   It pushes content below it naturally.
+========================================= */
+
+.commissions-v2__block-heading {
+    width:
+        min(
+            760px,
+            calc(100% - 2rem)
+        );
+
+    margin:
+        0 auto 2rem;
+
+    padding:
+        0.9rem 1.5rem;
+
+    box-sizing:
+        border-box;
+
+    background:
+        var(--gallery-v2-intro-background);
+
+    color:
+        var(--gallery-v2-section-heading-text);
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    border-radius:
+        1rem;
+
+    text-align:
+        center;
+
+    z-index:
+        4;
+}
+
+
+.commissions-v2__block-eyebrow {
+    margin:
+        0 0 0.2rem;
+
+    font-weight:
+        700;
+}
+
+
+.commissions-v2__block-heading h2 {
+    margin:
+        0;
+
+    font-size:
+        clamp(
+            1.8rem,
+            3vw,
+            2.65rem
+        );
+}
+
+
+.commissions-v2__block-description {
+    width:
+        min(
+            650px,
+            100%
+        );
+
+    margin:
+        0.45rem auto 0;
+
+    line-height:
+        1.45;
+}
+
+
+/* =========================================
+   FINISHED WEBSITE EXAMPLES
+========================================= */
+
+.commissions-v2__examples
+.commissions-v2__example {
+    position:
+        relative;
+
+    padding:
+        1.5rem;
+
+    box-sizing:
+        border-box;
+
+    background:
+        #f7e6a9;
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    border-radius:
+        1.5rem;
+
+    box-shadow:
+        0 0.35rem 0.7rem
+        rgba(101, 67, 79, 0.12);
+}
+
+
+.commissions-v2__examples
+.commissions-v2__example::before {
+    content: "";
+
+    position:
+        absolute;
+
+    inset:
+        0.5rem;
+
+    border:
+        2px dashed
+        var(--gallery-v2-stitch-color);
+
+    border-radius:
+        1.15rem;
+
+    pointer-events:
+        none;
+
+    z-index:
+        1;
+}
+
+
+.commissions-v2__example-copy,
+.commissions-v2__example-media {
+    position:
+        relative;
+
+    z-index:
+        2;
+}
+
+
+.commissions-v2__example-copy h3 {
+    color:
+        var(--gallery-v2-caption-text);
+}
+
+
+.commissions-v2__example-image-window {
+    background:
+        var(--gallery-v2-frame-inner-background);
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    border-radius:
+        1rem;
+}
+
+
+/* =========================================
+   SELECTION SHOWCASE CARDS
+========================================= */
+
+.commissions-v2__selection-slide {
+    position:
+        relative;
+
+    background:
+        #d9cbed;
+
+    color:
+        var(--gallery-v2-caption-text);
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    border-radius:
+        1.5rem;
+
+    box-shadow:
+        0 0.35rem 0.7rem
+        rgba(101, 67, 79, 0.12);
+}
+
+
+/* ALTERNATE SECTION COLORS */
+
+.commissions-v2__selection-showcase:nth-child(even)
+.commissions-v2__selection-slide {
+    background:
+        #f7e6a9;
+}
+
+
+.commissions-v2__selection-slide::before {
+    content: "";
+
+    position:
+        absolute;
+
+    inset:
+        0.5rem;
+
+    border:
+        2px dashed
+        var(--gallery-v2-stitch-color);
+
+    border-radius:
+        1.15rem;
+
+    pointer-events:
+        none;
+
+    z-index:
+        1;
+}
+
+
+.commissions-v2__selection-copy,
+.commissions-v2__selection-image-carousel,
+.commissions-v2__selection-note,
+.commissions-v2__selection-actions {
+    position:
+        relative;
+
+    z-index:
+        2;
+}
+
+
+/* SELECTED CARD */
+
+.commissions-v2__selection-slide--selected {
+    outline:
+        3px solid
+        var(--gallery-v2-intro-background);
+
+    outline-offset:
+        4px;
+}
+
+
+/* =========================================
+   SELECTION COPY
+========================================= */
+
+.commissions-v2__selection-copy h3 {
+    color:
+        var(--gallery-v2-caption-text);
+}
+
+
+.commissions-v2__selection-price {
+    width:
+        fit-content;
+
+    margin:
+        0.8rem auto 0 !important;
+
+    padding:
+        0.35rem 0.75rem;
+
+    background:
+        var(--gallery-v2-frame-inner-background);
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    border-radius:
+        999px;
+}
+
+
+/* =========================================
+   SELECTION IMAGE FRAME
+========================================= */
+
+.commissions-v2__selection-image-window {
+    background:
+        var(--gallery-v2-frame-inner-background);
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    border-radius:
+        1rem;
+}
+
+
+/* =========================================
+   SELECTION COUNTER
+========================================= */
+
+.commissions-v2__selection-counter {
+    width:
+        fit-content;
+
+    margin:
+        0 auto 1.5rem;
+
+    padding:
+        0.45rem 0.85rem;
+
+    background:
+        var(--gallery-v2-frame-inner-background);
+
+    color:
+        var(--gallery-v2-caption-text);
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    border-radius:
+        999px;
+
+    font-weight:
+        700;
+}
+
+
+/* =========================================
+   ARROWS
+========================================= */
+
+.commissions-v2__arrow,
+.commissions-v2__selection-arrow,
+.commissions-v2__image-arrow,
+.commissions-v2__selection-image-arrow {
+    background:
+        var(--gallery-v2-frame-inner-background);
+
+    color:
+        var(--gallery-v2-caption-text);
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    box-shadow:
+        0 0.2rem 0.45rem
+        rgba(101, 67, 79, 0.1);
+}
+
+
+/* =========================================
+   CAROUSEL DOTS
+========================================= */
+
+.commissions-v2__selection-dot {
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    color:
+        var(--gallery-v2-frame-border);
+}
+
+
+/* =========================================
+   SELECTION BUTTONS
+========================================= */
+
+.commissions-v2__selection-button,
+.commissions-v2__book-button,
+.commissions-v2__request-open,
+.commissions-v2__form-actions .button {
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+}
+
+
+.commissions-v2__selection-button--active {
+    box-shadow:
+        0 0 0 3px
+        rgba(246, 213, 194, 0.45);
+}
+
+
+/* =========================================
+   ESTIMATE
+========================================= */
+
+.commissions-v2__estimate {
+    text-align:
+        center;
+}
+
+
+.commissions-v2__estimate-total {
+    width:
+        fit-content;
+
+    margin:
+        0.5rem auto;
+
+    padding:
+        0.75rem 1.5rem;
+
+    background:
+        var(--gallery-v2-frame-inner-background);
+
+    color:
+        var(--gallery-v2-caption-text);
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    border-radius:
+        1rem;
+
+    box-shadow:
+        0 0.3rem 0.6rem
+        rgba(101, 67, 79, 0.1);
+}
+
+
+/* =========================================
+   SUBMIT REQUEST
+========================================= */
+
+.commissions-v2__request-launch {
+    display:
+        flex;
+
+    justify-content:
+        center;
+}
+
+
+.commissions-v2__request-open {
+    min-width:
+        250px;
+}
+
+
+/* =========================================
+   DIALOGS
+========================================= */
+
+.commissions-v2__dialog-panel {
+    position:
+        relative;
+
+    background:
+        var(--gallery-v2-frame-background);
+
+    color:
+        var(--gallery-v2-caption-text);
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    border-radius:
+        1.75rem;
+
+    box-shadow:
+        0 0.75rem 2rem
+        rgba(101, 67, 79, 0.22);
+}
+
+
+/* DIALOG STITCH */
+
+.commissions-v2__dialog-panel::before {
+    content: "";
+
+    position:
+        absolute;
+
+    inset:
+        0.55rem;
+
+    border:
+        2px dashed
+        var(--gallery-v2-stitch-color);
+
+    border-radius:
+        1.35rem;
+
+    pointer-events:
+        none;
+
+    z-index:
+        0;
+}
+
+
+.commissions-v2__dialog-top,
+.commissions-v2__book-instructions,
+.commissions-v2__book-content,
+.commissions-v2__request-form {
+    position:
+        relative;
+
+    z-index:
+        1;
+}
+
+
+/* DIALOG HEADER */
+
+.commissions-v2__dialog-top {
+    padding:
+        1rem;
+
+    background:
+        var(--gallery-v2-intro-background);
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    border-radius:
+        1rem;
+}
+
+
+.commissions-v2__dialog-close {
+    background:
+        var(--gallery-v2-frame-inner-background);
+
+    color:
+        var(--gallery-v2-caption-text);
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+}
+
+
+/* =========================================
+   BOOK CATALOGUES
+========================================= */
+
+.commissions-v2__book-instructions {
+    background:
+        #fff4c9;
+
+    color:
+        var(--gallery-v2-caption-text);
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    border-radius:
+        1rem;
+}
+
+
+.commissions-v2__book-section {
+    padding:
+        1.25rem;
+
+    background:
+        #d9cbed;
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    border-radius:
+        1.25rem;
+}
+
+
+.commissions-v2__book-section:nth-child(even) {
+    background:
+        #f7e6a9;
+}
+
+
+.commissions-v2__book-item {
+    background:
+        var(--gallery-v2-frame-inner-background);
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    border-radius:
+        1rem;
+}
+
+
+.commissions-v2__book-number {
+    background:
+        var(--gallery-v2-intro-background);
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+}
+
+
+/* =========================================
+   REQUEST FORM
+========================================= */
+
+.commissions-v2__form-review {
+    background:
+        #fff4c9;
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    border-radius:
+        1rem;
+}
+
+
+.commissions-v2__summary-item {
+    background:
+        var(--gallery-v2-frame-inner-background);
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+}
+
+
+.commissions-v2__field input,
+.commissions-v2__field textarea,
+.commissions-v2__field select {
+    background:
+        var(--gallery-v2-frame-inner-background);
+
+    color:
+        var(--gallery-v2-caption-text);
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+}
+
+
+.commissions-v2__conditional-group {
+    background:
+        #d9cbed;
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+
+    border-radius:
+        1rem;
+}
+
+
+.commissions-v2__form-warning {
+    background:
+        #fff4c9;
+
+    border:
+        2px solid
+        var(--gallery-v2-frame-border);
+}
+
+
+/* =========================================
+   WORKSHOP DECOR
+========================================= */
+
+.commissions-v2__decor {
+    position:
+        absolute;
+
+    z-index:
+        5;
+
+    pointer-events:
+        none;
+
+    background-repeat:
+        no-repeat;
+
+    background-position:
+        center;
+
+    background-size:
+        contain;
+}
+
+
+.commissions-v2__block
+.commissions-v2__decor--one {
+    width:
+        10rem;
+
+    height:
+        10rem;
+
+    top:
+        -4.5rem;
+
+    left:
+        -3rem;
+}
+
+
+.commissions-v2__block
+.commissions-v2__decor--two {
+    width:
+        8rem;
+
+    height:
+        8rem;
+
+    right:
+        -3.5rem;
+
+    bottom:
+        -2.5rem;
+}
+
+
+/* ROTATING SPOOL COLORS */
+
+.commissions-v2__block:nth-child(3n + 1)
+.commissions-v2__decor--one {
+    background-image:
+        url("../../assets/pinkspool.png");
+}
+
+
+.commissions-v2__block:nth-child(3n + 2)
+.commissions-v2__decor--one {
+    background-image:
+        url("../../assets/yellowspool.png");
+}
+
+
+.commissions-v2__block:nth-child(3n + 3)
+.commissions-v2__decor--one {
+    background-image:
+        url("../../assets/bluespool.png");
+}
+
+
+/* ROTATING BUTTON COLORS */
+
+.commissions-v2__block:nth-child(odd)
+.commissions-v2__decor--two {
+    background-image:
+        url("../../assets/yellowbutton.png");
+}
+
+
+.commissions-v2__block:nth-child(even)
+.commissions-v2__decor--two {
+    background-image:
+        url("../../assets/pinkbutton.png");
+}
+
+
+/* INTRO HAS ITS OWN PLUSH DECOR */
+
+.commissions-v2__intro
+.commissions-v2__decor {
+    display:
+        none;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .commissions-v2 {
+        padding:
+            0.5rem;
+    }
+
+
+    /* INTRO */
+
+    .commissions-v2__intro {
+        width:
+            calc(100% - 1rem);
+
+        margin:
+            1rem auto;
+
+        padding:
+            2rem 4.5rem;
+    }
+
+
+    .commissions-v2__intro::before,
+    .commissions-v2__intro::after {
+        width:
+            3.5rem;
+
+        height:
+            3.5rem;
+    }
+
+
+    .commissions-v2__intro::before {
+        left:
+            0.75rem;
+    }
+
+
+    .commissions-v2__intro::after {
+        right:
+            0.75rem;
+    }
+
+
+    /* MAIN BLOCK */
+
+    .commissions-v2__block {
+        width:
+            calc(100% - 1rem);
+
+        padding:
+            1.25rem 0.75rem;
+    }
+
+
+    /* TITLE BOX */
+
+    .commissions-v2__block-heading {
+        width:
+            calc(100% - 1rem);
+
+        margin:
+            0 auto 1.5rem;
+
+        padding:
+            0.7rem 1rem;
+    }
+
+
+    .commissions-v2__block-heading h2 {
+        font-size:
+            clamp(
+                1.5rem,
+                7vw,
+                2rem
+            );
+    }
+
+
+    .commissions-v2__block-description {
+        font-size:
+            0.9rem;
+    }
+
+
+    /* EXAMPLE + SELECTION PANELS */
+
+    .commissions-v2__examples
+    .commissions-v2__example,
+    .commissions-v2__selection-slide {
+        padding:
+            1rem;
+    }
+
+
+    /* DECOR */
+
+    .commissions-v2__block
+    .commissions-v2__decor--one {
+        width:
+            5rem;
+
+        height:
+            5rem;
+
+        top:
+            -2.3rem;
+
+        left:
+            -1.5rem;
+    }
+
+
+    .commissions-v2__block
+    .commissions-v2__decor--two {
+        width:
+            4.5rem;
+
+        height:
+            4.5rem;
+
+        right:
+            -1.75rem;
+
+        bottom:
+            -1.5rem;
+    }
+
+
+    /* DIALOG */
+
+    .commissions-v2__dialog-panel {
+        padding:
+            1rem;
+    }
+
+
+    .commissions-v2__dialog-top {
+        padding:
+            0.8rem;
+    }
+
+
+    .commissions-v2__book-section {
+        padding:
+            0.75rem;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 430px) {
+
+    .commissions-v2__intro {
+        padding:
+            1.75rem 3.75rem;
+    }
+
+
+    .commissions-v2__intro::before,
+    .commissions-v2__intro::after {
+        width:
+            3rem;
+
+        height:
+            3rem;
+    }
+}
