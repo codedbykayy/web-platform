@@ -19,7 +19,7 @@ const faq={
     },
     {
         question: "Do you use AI?",
-        answer: "I build my brand on honesty so thus I'll begin here, being a completely self taught coder trying to compete in a competitive space, I do use AI to answer questions and explain complex concepts to me. But I NEVERR use AI in my art and do not support people using AI art for monetization. I also do not vibe code! I understand every piece of my code, why it's going in, and how to change it at any time."
+        answer: "I build my brand on honesty so thus I'll begin here, being a completely self taught coder trying to compete in a competitive space, I have used AI to answer questions and explain complex concepts to me. But I NEVERR use AI in my art and do not support people using AI art for monetization. I also do not vibe code! I understand every piece of my code, why it's going in, and how to change it at any time. I've also made it easy for the client to change their own code if they wish to do so after delivery, but please do not claim my code as your own or resell/redistribute the underlying foundations, thank you."
     },
     {
         question: "What's the top thing you want to learn next?",
