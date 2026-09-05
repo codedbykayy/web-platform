@@ -1121,7 +1121,7 @@ commissions-v2 {
 }
 
 
-/* =========================================
+* =========================================
    MOBILE
 ========================================= */
 
@@ -1129,72 +1129,633 @@ commissions-v2 {
 
     .commissions-v2 {
         padding:
-            0.4rem;
+            0.35rem;
     }
 
 
-    /* INTRO */
+    /* =====================================
+       INTRO
+    ===================================== */
 
     .commissions-v2__intro {
         width:
-            calc(100% - 0.8rem);
+            calc(100% - 0.7rem);
 
         margin:
-            1rem auto;
+            0.85rem auto;
 
         padding:
-            2rem 4.5rem;
+            1.75rem 3.75rem;
+
+        border-radius:
+            1.4rem;
     }
 
 
     .commissions-v2__intro::before,
     .commissions-v2__intro::after {
         width:
-            3.5rem;
+            3.25rem;
 
         height:
-            3.5rem;
+            3.25rem;
     }
 
 
     .commissions-v2__intro::before {
         left:
-            0.75rem;
+            0.6rem;
     }
 
 
     .commissions-v2__intro::after {
         right:
-            0.75rem;
+            0.6rem;
     }
 
 
-    /* OUTER BLOCK */
+    /* =====================================
+       OUTER BLOCKS
+
+       Keep the pink frame, but let the
+       inner content use much more room.
+    ===================================== */
 
     .commissions-v2__block {
         width:
-            calc(100% - 0.5rem);
+            calc(100% - 0.35rem);
 
         padding:
-            0.8rem;
+            0.65rem;
+
+        border-radius:
+            1.4rem;
     }
 
 
-    /* TITLE BOX */
+    .commissions-v2__block::before {
+        inset:
+            0.32rem;
+
+        border-radius:
+            1.1rem;
+    }
+
+
+    /* =====================================
+       TITLE BOXES
+
+       Stay in normal flow.
+       No fixed height assumptions.
+    ===================================== */
 
     .commissions-v2__block-heading {
         width:
-            calc(100% - 0.5rem);
+            calc(100% - 0.35rem);
 
         margin:
-            0 auto 1rem;
+            0 auto 0.85rem;
 
         padding:
-            0.7rem 0.8rem;
+            0.7rem 0.75rem;
+
+        border-radius:
+            0.9rem;
+    }
+
+
+    .commissions-v2__block-eyebrow {
+        font-size:
+            0.9rem;
     }
 
 
     .commissions-v2__block-heading h2 {
+        font-size:
+            clamp(
+                1.45rem,
+                7vw,
+                2rem
+            );
+
+        line-height:
+            1.08;
+    }
+
+
+    .commissions-v2__block-description {
+        margin-top:
+            0.4rem;
+
+        font-size:
+            0.88rem;
+
+        line-height:
+            1.4;
+    }
+
+
+    /* =====================================
+       FINISHED WEBSITE EXAMPLES
+
+       IMPORTANT:
+       Screenshot comes BEFORE the long
+       detail list on mobile.
+    ===================================== */
+
+    .commissions-v2__carousel {
+        grid-template-columns:
+            2.4rem
+            minmax(0, 1fr)
+            2.4rem;
+
+        gap:
+            0.25rem;
+    }
+
+
+    .commissions-v2__examples
+    .commissions-v2__example {
+        padding:
+            0.65rem;
+
+        border-radius:
+            1.15rem;
+    }
+
+
+    .commissions-v2__examples
+    .commissions-v2__example::before {
+        inset:
+            0.3rem;
+
+        border-radius:
+            0.9rem;
+    }
+
+
+    .commissions-v2__example {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            0.9rem;
+    }
+
+
+    /* SCREENSHOT FIRST */
+
+    .commissions-v2__example-media {
+        grid-column:
+            1;
+
+        grid-row:
+            1;
+
+        width:
+            100%;
+    }
+
+
+    .commissions-v2__example-copy {
+        grid-column:
+            1;
+
+        grid-row:
+            2;
+
+        width:
+            100%;
+    }
+
+
+    .commissions-v2__example-copy h3 {
+        margin-bottom:
+            0.5rem;
+
+        font-size:
+            clamp(
+                1.45rem,
+                6vw,
+                1.9rem
+            );
+    }
+
+
+    .commissions-v2__example-copy > p {
+        margin-bottom:
+            1rem;
+
+        font-size:
+            0.95rem;
+
+        line-height:
+            1.45;
+    }
+
+
+    .commissions-v2__example-details {
+        gap:
+            0.8rem;
+    }
+
+
+    /* BIGGER FINISHED-SITE IMAGE */
+
+    .commissions-v2__image-carousel {
+        grid-template-columns:
+            2.35rem
+            minmax(0, 1fr)
+            2.35rem;
+
+        gap:
+            0.25rem;
+
+        width:
+            100%;
+    }
+
+
+    .commissions-v2__example-image-window {
+        width:
+            100%;
+
+        aspect-ratio:
+            4 / 3;
+
+        border-radius:
+            0.85rem;
+    }
+
+
+    .commissions-v2__example-image img {
+        width:
+            100%;
+
+        height:
+            100%;
+
+        object-fit:
+            contain;
+    }
+
+
+    /* =====================================
+       SELECTION SHOWCASE
+
+       Inner card fills almost all of the
+       pink section.
+    ===================================== */
+
+    .commissions-v2__selection-carousel {
+        grid-template-columns:
+            2.4rem
+            minmax(0, 1fr)
+            2.4rem;
+
+        gap:
+            0.25rem;
+
+        width:
+            100%;
+    }
+
+
+    .commissions-v2__selection-slide {
+        padding:
+            0.65rem;
+
+        border-radius:
+            1.15rem;
+    }
+
+
+    .commissions-v2__selection-slide::before {
+        inset:
+            0.3rem;
+
+        border-radius:
+            0.9rem;
+    }
+
+
+    .commissions-v2__selection-slide--active {
+        gap:
+            0.85rem;
+    }
+
+
+    /* =====================================
+       SELECTION COPY
+    ===================================== */
+
+    .commissions-v2__selection-copy {
+        width:
+            100%;
+    }
+
+
+    .commissions-v2__selection-copy h3 {
+        margin-bottom:
+            0.45rem;
+
+        font-size:
+            clamp(
+                1.4rem,
+                6vw,
+                1.85rem
+            );
+
+        line-height:
+            1.1;
+    }
+
+
+    .commissions-v2__selection-copy > p {
+        font-size:
+            0.92rem;
+
+        line-height:
+            1.4;
+    }
+
+
+    .commissions-v2__selection-price {
+        margin-top:
+            0.5rem !important;
+
+        padding:
+            0.28rem 0.6rem;
+
+        font-size:
+            0.88rem;
+    }
+
+
+    /* =====================================
+       BIGGER SELECTION SCREENSHOTS
+    ===================================== */
+
+    .commissions-v2__selection-image-carousel {
+        width:
+            100%;
+
+        grid-template-columns:
+            2.35rem
+            minmax(0, 1fr)
+            2.35rem;
+
+        gap:
+            0.25rem;
+    }
+
+
+    .commissions-v2__selection-image-window {
+        width:
+            100%;
+
+        aspect-ratio:
+            4 / 3;
+
+        border-radius:
+            0.85rem;
+    }
+
+
+    .commissions-v2__selection-image img {
+        width:
+            100%;
+
+        height:
+            100%;
+
+        object-fit:
+            contain;
+    }
+
+
+    .commissions-v2__selection-dots {
+        gap:
+            0.35rem;
+    }
+
+
+    /* =====================================
+       SELECTION NOTE + COUNTER
+    ===================================== */
+
+    .commissions-v2__selection-counter {
+        margin:
+            0 auto 0.8rem;
+
+        padding:
+            0.35rem 0.7rem;
+
+        font-size:
+            0.88rem;
+    }
+
+
+    .commissions-v2__selection-note {
+        width:
+            100%;
+
+        font-size:
+            0.88rem;
+
+        line-height:
+            1.4;
+    }
+
+
+    /* =====================================
+       ACTION BUTTONS
+    ===================================== */
+
+    .commissions-v2__selection-actions {
+        width:
+            100%;
+
+        flex-direction:
+            column;
+
+        gap:
+            0.5rem;
+    }
+
+
+    .commissions-v2__selection-button,
+    .commissions-v2__book-button {
+        width:
+            100%;
+
+        min-width:
+            0;
+    }
+
+
+    /* =====================================
+       ARROWS
+
+       Slightly smaller so they don't steal
+       width from the screenshots.
+    ===================================== */
+
+    .commissions-v2__arrow,
+    .commissions-v2__selection-arrow {
+        width:
+            2.35rem;
+
+        height:
+            2.35rem;
+
+        font-size:
+            1.25rem;
+    }
+
+
+    .commissions-v2__image-arrow,
+    .commissions-v2__selection-image-arrow {
+        width:
+            2.2rem;
+
+        height:
+            2.2rem;
+
+        font-size:
+            1.15rem;
+    }
+
+
+    /* =====================================
+       ESTIMATE
+    ===================================== */
+
+    .commissions-v2__estimate-total {
+        margin:
+            0.35rem auto;
+
+        padding:
+            0.6rem 1rem;
+
+        font-size:
+            clamp(
+                1.8rem,
+                9vw,
+                2.5rem
+            );
+    }
+
+
+    .commissions-v2__estimate-short-disclaimer,
+    .commissions-v2__estimate-disclaimer {
+        font-size:
+            0.9rem;
+
+        line-height:
+            1.4;
+    }
+
+
+    /* =====================================
+       REQUEST BUTTON
+    ===================================== */
+
+    .commissions-v2__request-open {
+        width:
+            min(
+                100%,
+                20rem
+            );
+
+        min-width:
+            0;
+    }
+
+
+    /* =====================================
+       DECOR
+
+       Keep it, but stop it taking over
+       the tighter mobile frames.
+    ===================================== */
+
+    .commissions-v2__block
+    .commissions-v2__decor--one {
+        width:
+            4rem;
+
+        height:
+            4rem;
+
+        top:
+            -1.75rem;
+
+        left:
+            -1rem;
+    }
+
+
+    .commissions-v2__block
+    .commissions-v2__decor--two {
+        width:
+            3.75rem;
+
+        height:
+            3.75rem;
+
+        right:
+            -1rem;
+
+        bottom:
+            -1rem;
+    }
+
+
+    /* =====================================
+       DIALOGS
+    ===================================== */
+
+    .commissions-v2__dialog {
+        width:
+            calc(100% - 0.5rem);
+
+        max-height:
+            calc(100vh - 0.5rem);
+    }
+
+
+    .commissions-v2__dialog-panel {
+        max-height:
+            calc(100vh - 0.5rem);
+
+        padding:
+            0.8rem;
+
+        border-radius:
+            1.2rem;
+    }
+
+
+    .commissions-v2__dialog-panel::before {
+        inset:
+            0.3rem;
+
+        border-radius:
+            0.95rem;
+    }
+
+
+    .commissions-v2__dialog-top {
+        padding:
+            0.7rem;
+
+        gap:
+            0.6rem;
+    }
+
+
+    .commissions-v2__dialog-top h2 {
         font-size:
             clamp(
                 1.5rem,
@@ -1204,28 +1765,51 @@ commissions-v2 {
     }
 
 
-    .commissions-v2__block-description {
+    /* =====================================
+       BOOK
+    ===================================== */
+
+    .commissions-v2__book-instructions {
+        margin-bottom:
+            1rem;
+
+        padding:
+            0.8rem;
+
         font-size:
             0.9rem;
     }
 
 
-    /* FINISHED EXAMPLES */
-
-    .commissions-v2__carousel {
-        gap:
-            0.35rem;
-    }
-
-
-    .commissions-v2__examples
-    .commissions-v2__example {
+    .commissions-v2__book-section {
         padding:
-            0.75rem;
+            0.65rem;
     }
 
 
-    .commissions-v2__example {
+    .commissions-v2__book-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        gap:
+            0.55rem;
+    }
+
+
+    .commissions-v2__book-item {
+        padding:
+            0.6rem;
+    }
+
+
+    /* =====================================
+       FORM
+    ===================================== */
+
+    .commissions-v2__form-fields {
         grid-template-columns:
             1fr;
 
@@ -1234,80 +1818,23 @@ commissions-v2 {
     }
 
 
-    /* SELECTION CARDS */
-
-    .commissions-v2__selection-carousel {
-        gap:
-            0.35rem;
+    .commissions-v2__field,
+    .commissions-v2__field:has(textarea),
+    .commissions-v2__field:has(input[type="file"]) {
+        grid-column:
+            1;
     }
 
 
-    .commissions-v2__selection-slide {
-        padding:
-            0.75rem;
+    .commissions-v2__form-actions {
+        flex-direction:
+            column-reverse;
     }
 
 
-    .commissions-v2__selection-image-carousel {
+    .commissions-v2__form-actions .button {
         width:
             100%;
-
-        gap:
-            0.35rem;
-    }
-
-
-    /* DECOR */
-
-    .commissions-v2__block
-    .commissions-v2__decor--one {
-        width:
-            4.5rem;
-
-        height:
-            4.5rem;
-
-        top:
-            -2rem;
-
-        left:
-            -1.25rem;
-    }
-
-
-    .commissions-v2__block
-    .commissions-v2__decor--two {
-        width:
-            4rem;
-
-        height:
-            4rem;
-
-        right:
-            -1.25rem;
-
-        bottom:
-            -1.25rem;
-    }
-
-
-    /* DIALOG */
-
-    .commissions-v2__dialog-panel {
-        padding:
-            1rem;
-    }
-
-
-    .commissions-v2__dialog-top {
-        padding:
-            0.8rem;
-    }
-
-
-    .commissions-v2__book-section {
-        padding:
-            0.75rem;
     }
 }
 
@@ -1318,30 +1845,90 @@ commissions-v2 {
 
 @media (max-width: 430px) {
 
-    .commissions-v2__intro {
+    .commissions-v2 {
         padding:
-            1.75rem 3.75rem;
+            0.2rem;
+    }
+
+
+    .commissions-v2__intro {
+        width:
+            calc(100% - 0.4rem);
+
+        padding:
+            1.5rem 3.25rem;
     }
 
 
     .commissions-v2__intro::before,
     .commissions-v2__intro::after {
         width:
-            3rem;
+            2.75rem;
 
         height:
-            3rem;
+            2.75rem;
     }
 
 
     .commissions-v2__block {
+        width:
+            calc(100% - 0.15rem);
+
+        padding:
+            0.5rem;
+    }
+
+
+    .commissions-v2__block-heading {
+        width:
+            100%;
+
         padding:
             0.65rem;
     }
 
 
-    .commissions-v2__selection-slide {
+    .commissions-v2__selection-slide,
+    .commissions-v2__examples
+    .commissions-v2__example {
         padding:
-            0.65rem;
+            0.55rem;
+    }
+
+
+    .commissions-v2__carousel,
+    .commissions-v2__selection-carousel {
+        grid-template-columns:
+            2.2rem
+            minmax(0, 1fr)
+            2.2rem;
+
+        gap:
+            0.15rem;
+    }
+
+
+    .commissions-v2__image-carousel,
+    .commissions-v2__selection-image-carousel {
+        grid-template-columns:
+            2.1rem
+            minmax(0, 1fr)
+            2.1rem;
+
+        gap:
+            0.15rem;
+    }
+
+
+    .commissions-v2__example-image-window,
+    .commissions-v2__selection-image-window {
+        aspect-ratio:
+            4 / 3;
+    }
+
+
+    .commissions-v2__book-grid {
+        grid-template-columns:
+            1fr 1fr;
     }
 }
