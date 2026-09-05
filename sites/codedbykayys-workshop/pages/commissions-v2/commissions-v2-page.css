@@ -1,4 +1,4 @@
-.commissions-v2 {
+commissions-v2 {
     background:
         var(--gallery-v2-page-background);
 
@@ -110,16 +110,17 @@
 
 .commissions-v2__blocks {
     gap:
-        3.5rem;
+        3rem;
 }
 
 
 /* =========================================
    MAIN BUILDER BLOCK
 
-   IMPORTANT:
-   Headings live in normal document flow.
-   The block grows naturally with them.
+   Tighter outer frame so the inner
+   content uses more of the pink area.
+
+   Heading remains in normal flow.
 ========================================= */
 
 .commissions-v2__block {
@@ -129,14 +130,14 @@
     width:
         min(
             1450px,
-            96%
+            97%
         );
 
     margin:
         0 auto;
 
     padding:
-        2rem;
+        1.25rem;
 
     box-sizing:
         border-box;
@@ -169,7 +170,7 @@
         absolute;
 
     inset:
-        0.55rem;
+        0.45rem;
 
     border:
         2px dashed
@@ -209,22 +210,23 @@
 /* =========================================
    BLOCK TITLE TAB
 
-   NOT ABSOLUTE.
-   It pushes content below it naturally.
+   Normal document flow:
+   taller headings automatically push
+   everything underneath downward.
 ========================================= */
 
 .commissions-v2__block-heading {
     width:
         min(
-            760px,
+            820px,
             calc(100% - 2rem)
         );
 
     margin:
-        0 auto 2rem;
+        0 auto 1.25rem;
 
     padding:
-        0.9rem 1.5rem;
+        0.8rem 1.35rem;
 
     box-sizing:
         border-box;
@@ -275,12 +277,12 @@
 .commissions-v2__block-description {
     width:
         min(
-            650px,
+            700px,
             100%
         );
 
     margin:
-        0.45rem auto 0;
+        0.4rem auto 0;
 
     line-height:
         1.45;
@@ -289,7 +291,24 @@
 
 /* =========================================
    FINISHED WEBSITE EXAMPLES
+
+   Larger usable content area.
 ========================================= */
+
+.commissions-v2__carousel {
+    width:
+        min(
+            1280px,
+            100%
+        );
+
+    margin:
+        0 auto;
+
+    gap:
+        0.8rem;
+}
+
 
 .commissions-v2__examples
 .commissions-v2__example {
@@ -297,7 +316,7 @@
         relative;
 
     padding:
-        1.5rem;
+        1.1rem;
 
     box-sizing:
         border-box;
@@ -326,7 +345,7 @@
         absolute;
 
     inset:
-        0.5rem;
+        0.4rem;
 
     border:
         2px dashed
@@ -359,6 +378,18 @@
 }
 
 
+/* MORE SPACE FOR FINISHED SITE SCREENSHOTS */
+
+.commissions-v2__example {
+    grid-template-columns:
+        minmax(240px, 0.7fr)
+        minmax(0, 1.3fr);
+
+    gap:
+        1.75rem;
+}
+
+
 .commissions-v2__example-image-window {
     background:
         var(--gallery-v2-frame-inner-background);
@@ -373,12 +404,33 @@
 
 
 /* =========================================
-   SELECTION SHOWCASE CARDS
+   SELECTION SHOWCASE
+
+   Inner card now fills much more of
+   each pink stitched section.
 ========================================= */
+
+.commissions-v2__selection-carousel {
+    width:
+        min(
+            1280px,
+            100%
+        );
+
+    margin:
+        0 auto;
+
+    gap:
+        0.8rem;
+}
+
 
 .commissions-v2__selection-slide {
     position:
         relative;
+
+    padding:
+        1.15rem;
 
     background:
         #d9cbed;
@@ -415,7 +467,7 @@
         absolute;
 
     inset:
-        0.5rem;
+        0.4rem;
 
     border:
         2px dashed
@@ -452,13 +504,25 @@
         var(--gallery-v2-intro-background);
 
     outline-offset:
-        4px;
+        3px;
 }
 
 
 /* =========================================
    SELECTION COPY
+
+   Slightly tighter so image gets more
+   visual priority.
 ========================================= */
+
+.commissions-v2__selection-copy {
+    width:
+        min(
+            760px,
+            100%
+        );
+}
+
 
 .commissions-v2__selection-copy h3 {
     color:
@@ -471,10 +535,10 @@
         fit-content;
 
     margin:
-        0.8rem auto 0 !important;
+        0.65rem auto 0 !important;
 
     padding:
-        0.35rem 0.75rem;
+        0.3rem 0.7rem;
 
     background:
         var(--gallery-v2-frame-inner-background);
@@ -489,10 +553,28 @@
 
 
 /* =========================================
-   SELECTION IMAGE FRAME
+   SELECTION IMAGE AREA
+
+   This is the biggest visual change:
+   examples are allowed to grow much larger.
 ========================================= */
 
+.commissions-v2__selection-image-carousel {
+    width:
+        min(
+            980px,
+            100%
+        );
+
+    gap:
+        0.6rem;
+}
+
+
 .commissions-v2__selection-image-window {
+    width:
+        100%;
+
     background:
         var(--gallery-v2-frame-inner-background);
 
@@ -506,6 +588,22 @@
 
 
 /* =========================================
+   SELECTION NOTE
+========================================= */
+
+.commissions-v2__selection-note {
+    width:
+        min(
+            760px,
+            100%
+        );
+
+    line-height:
+        1.45;
+}
+
+
+/* =========================================
    SELECTION COUNTER
 ========================================= */
 
@@ -514,10 +612,10 @@
         fit-content;
 
     margin:
-        0 auto 1.5rem;
+        0 auto 1rem;
 
     padding:
-        0.45rem 0.85rem;
+        0.4rem 0.8rem;
 
     background:
         var(--gallery-v2-frame-inner-background);
@@ -576,8 +674,14 @@
 
 
 /* =========================================
-   SELECTION BUTTONS
+   SELECTION ACTIONS
 ========================================= */
+
+.commissions-v2__selection-actions {
+    gap:
+        0.65rem;
+}
+
 
 .commissions-v2__selection-button,
 .commissions-v2__book-button,
@@ -611,10 +715,10 @@
         fit-content;
 
     margin:
-        0.5rem auto;
+        0.4rem auto;
 
     padding:
-        0.75rem 1.5rem;
+        0.7rem 1.4rem;
 
     background:
         var(--gallery-v2-frame-inner-background);
@@ -908,32 +1012,32 @@
 .commissions-v2__block
 .commissions-v2__decor--one {
     width:
-        10rem;
+        9rem;
 
     height:
-        10rem;
+        9rem;
 
     top:
-        -4.5rem;
+        -4rem;
 
     left:
-        -3rem;
+        -2.5rem;
 }
 
 
 .commissions-v2__block
 .commissions-v2__decor--two {
     width:
-        8rem;
+        7.5rem;
 
     height:
-        8rem;
+        7.5rem;
 
     right:
-        -3.5rem;
+        -3rem;
 
     bottom:
-        -2.5rem;
+        -2.25rem;
 }
 
 
@@ -986,6 +1090,38 @@
 
 
 /* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .commissions-v2__block {
+        width:
+            98%;
+    }
+
+
+    .commissions-v2__selection-image-carousel {
+        width:
+            min(
+                860px,
+                100%
+            );
+    }
+
+
+    .commissions-v2__example {
+        grid-template-columns:
+            minmax(220px, 0.8fr)
+            minmax(0, 1.2fr);
+
+        gap:
+            1.25rem;
+    }
+}
+
+
+/* =========================================
    MOBILE
 ========================================= */
 
@@ -993,7 +1129,7 @@
 
     .commissions-v2 {
         padding:
-            0.5rem;
+            0.4rem;
     }
 
 
@@ -1001,7 +1137,7 @@
 
     .commissions-v2__intro {
         width:
-            calc(100% - 1rem);
+            calc(100% - 0.8rem);
 
         margin:
             1rem auto;
@@ -1033,14 +1169,14 @@
     }
 
 
-    /* MAIN BLOCK */
+    /* OUTER BLOCK */
 
     .commissions-v2__block {
         width:
-            calc(100% - 1rem);
+            calc(100% - 0.5rem);
 
         padding:
-            1.25rem 0.75rem;
+            0.8rem;
     }
 
 
@@ -1048,13 +1184,13 @@
 
     .commissions-v2__block-heading {
         width:
-            calc(100% - 1rem);
+            calc(100% - 0.5rem);
 
         margin:
-            0 auto 1.5rem;
+            0 auto 1rem;
 
         padding:
-            0.7rem 1rem;
+            0.7rem 0.8rem;
     }
 
 
@@ -1074,13 +1210,50 @@
     }
 
 
-    /* EXAMPLE + SELECTION PANELS */
+    /* FINISHED EXAMPLES */
+
+    .commissions-v2__carousel {
+        gap:
+            0.35rem;
+    }
+
 
     .commissions-v2__examples
-    .commissions-v2__example,
+    .commissions-v2__example {
+        padding:
+            0.75rem;
+    }
+
+
+    .commissions-v2__example {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            1rem;
+    }
+
+
+    /* SELECTION CARDS */
+
+    .commissions-v2__selection-carousel {
+        gap:
+            0.35rem;
+    }
+
+
     .commissions-v2__selection-slide {
         padding:
-            1rem;
+            0.75rem;
+    }
+
+
+    .commissions-v2__selection-image-carousel {
+        width:
+            100%;
+
+        gap:
+            0.35rem;
     }
 
 
@@ -1089,32 +1262,32 @@
     .commissions-v2__block
     .commissions-v2__decor--one {
         width:
-            5rem;
+            4.5rem;
 
         height:
-            5rem;
+            4.5rem;
 
         top:
-            -2.3rem;
+            -2rem;
 
         left:
-            -1.5rem;
+            -1.25rem;
     }
 
 
     .commissions-v2__block
     .commissions-v2__decor--two {
         width:
-            4.5rem;
+            4rem;
 
         height:
-            4.5rem;
+            4rem;
 
         right:
-            -1.75rem;
+            -1.25rem;
 
         bottom:
-            -1.5rem;
+            -1.25rem;
     }
 
 
@@ -1158,5 +1331,17 @@
 
         height:
             3rem;
+    }
+
+
+    .commissions-v2__block {
+        padding:
+            0.65rem;
+    }
+
+
+    .commissions-v2__selection-slide {
+        padding:
+            0.65rem;
     }
 }
