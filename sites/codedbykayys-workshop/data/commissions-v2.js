@@ -328,7 +328,7 @@ const commissionsV2 = {
                         0,
 
                     priceLabel:
-                        "Included",
+                        "Homepage Package: $150. Hero + 4 sections of your choice (choose sections below).",
 
                     buttonText:
                         "Choose Split"
@@ -370,7 +370,7 @@ const commissionsV2 = {
                         0,
 
                     priceLabel:
-                        "Included",
+                        "Homepage Package: $150. Hero + 4 sections of your choice (choose sections below).",
 
                     buttonText:
                         "Choose Stacked"
